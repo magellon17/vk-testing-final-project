@@ -8,7 +8,7 @@ import ru.siobko.testing.core.home.HomePage;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CheckUploadButtonHidingAfterUploadingAvatarTest extends BaseRequiredLoginTest {
+public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends BaseRequiredLoginTest {
 
     private final UploadAvatarSteps steps = new UploadAvatarSteps();
 
