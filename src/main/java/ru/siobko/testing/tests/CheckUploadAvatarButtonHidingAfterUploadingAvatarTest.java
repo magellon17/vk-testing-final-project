@@ -26,6 +26,8 @@ public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends BaseR
 
     @AfterEach
     public void afterTest() {
-        steps.tearDown();
+        steps.removeAvatar();
+        steps.removeAvatarPhotoFromProfilePage();
+        steps.openHomePageFromProfilePage();
     }
 }
