@@ -5,9 +5,9 @@ import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.home.HomePage;
 import ru.siobko.testing.core.user.MyUserProfilePage;
 
-public class UploadAvatarSteps {
+public class UploadAndRemovingAvatarSteps {
 
-    private static final Logger log = LoggerFactory.getLogger(UploadAvatarSteps.class);
+    private static final Logger log = LoggerFactory.getLogger(UploadAndRemovingAvatarSteps.class);
 
     public void openHomePageFromProfilePage() {
         log.info("Открываем страницу ленты пользователя");
