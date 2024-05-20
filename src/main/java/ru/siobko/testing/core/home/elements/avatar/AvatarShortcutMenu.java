@@ -32,7 +32,7 @@ public class AvatarShortcutMenu implements UIComponent {
     public RemoveAvatarLayer clickOnRemoveUserAvatar() {
         log.info("Кликаем на 'Убрать фото профиля' в контекстном меню аватара");
         menu.$(DELETE_AVATAR_BUTTON).shouldBe(
-                visible.because("Не отобразилась кнопка добавки фото")
+                visible.because("Не отобразилась кнопка удаления аватара")
         ).click();
         return new RemoveAvatarLayer();
     }

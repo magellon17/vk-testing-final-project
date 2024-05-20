@@ -21,17 +21,14 @@ public class PhotoLayer implements UIComponent {
 
     public PhotoLayer() {
         isLoaded();
-        log.info("Перешли на страницу фото");
+        log.info("Загрузился фотолеер");
     }
 
-    /**
-     * Проверяет наличие изображения на леере
-     */
-    public boolean checkImage() {
-        log.info("Делаем проверку на наличие изображения.");
-        return $(IMAGE).shouldBe(
-                visible.because("Не появилось фото.")
-        ).isImage();
+    @Override
+    public void isLoaded() throws Error {
+        $(IMAGE_CONTAINER).shouldBe(
+                visible.because("Не отобразилось область под фото.")
+        );
     }
 
     public PhotoLayerMoreActionsMenu expandActionsMenu() {
@@ -46,16 +43,9 @@ public class PhotoLayer implements UIComponent {
      * Закрывает фотолеер
      */
     public void closeLayer() {
-        log.info("Закрываем станицу с фото.");
+        log.info("Закрываем фотолеер");
         $(CLOSE_PHOTO_PAGE).shouldBe(
-                visible.because("Не отобразился крестик для закрытия страницы с фото.")
+                visible.because("Не отобразился крестик для закрытия фотолеера")
         ).click();
-    }
-
-    @Override
-    public void isLoaded() throws Error {
-        $(IMAGE_CONTAINER).shouldBe(
-                visible.because("Не отобразилось область под фото.")
-        );
     }
 }

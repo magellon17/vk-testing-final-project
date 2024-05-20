@@ -23,48 +23,48 @@ public class LoginPage implements UIComponent {
 
     public LoginPage() {
         isLoaded();
-        log.info("Перешли на страницу входа.");
+        log.info("Перешли на страницу входа");
     }
 
     @Override
     public void isLoaded() throws Error {
         $(LOGIN_FIELD).shouldBe(
-                exist.because("Не отобразилось поле логина.")
+                exist.because("Не отобразилось поле логина")
         );
         $(PASSWORD_FIELD).shouldBe(
-                exist.because("Не отобразилось поле пароля.")
+                exist.because("Не отобразилось поле пароля")
         );
         $(SUBMIT_BUTTON).shouldBe(
-                exist.because("Не отобразилась кнопка входа.")
+                exist.because("Не отобразилась кнопка входа")
         );
     }
 
     public LoginPage enterLogin(String login) {
-        log.info("Вводим логин.");
+        log.info("Вводим логин");
         $(LOGIN_FIELD).shouldBe(
-                visible.because("Не отобразилось поле логина.")
+                visible.because("Не отобразилось поле логина")
         ).setValue(login);
         return this;
     }
 
     public LoginPage enterPassword(String password) {
-        log.info("Вводим пароль.");
+        log.info("Вводим пароль");
         $(PASSWORD_FIELD).shouldBe(
-                visible.because("Не отобразилось поле пароля.")
+                visible.because("Не отобразилось поле пароля")
         ).setValue(password);
         return this;
     }
 
     public HomePage clickSubmit() {
-        log.info("Кликаем на кнопку входа.");
+        log.info("Кликаем на кнопку входа");
         $(SUBMIT_BUTTON).shouldBe(
-                visible.because("Не отобразилась кнопка входа.")
+                visible.because("Не отобразилась кнопка входа")
         ).click();
         return new HomePage();
     }
 
     public HomePage login(TestBot bot) {
-        log.info("Выполняем вход в аккаунт.");
+        log.info("Выполняем вход в аккаунт");
         return enterLogin(bot.login())
                 .enterPassword(bot.password())
                 .clickSubmit();

@@ -27,15 +27,16 @@ public class HomePage implements UIComponent {
 
     public HomePage() {
         isLoaded();
+        log.info("Перешли на главную страницу пользователя");
     }
 
     public void isLoaded() throws Error {
         $(FEED_POST).shouldBe(
-                visible.because("Не отобразилась лента пользователя"));
+                visible.because("Не отобразился первый пост ленты"));
         $(HOBBIES_CONTAINER).shouldBe(
-                visible.because("Не отобразилась лента пользователя"));
+                visible.because("Не отобразился блок увлечений ленты"));
         $(AVATAR_BLOCK).shouldBe(
-                visible.because("Не отобразилась лента пользователя"));
+                visible.because("Не отобразился блок аватара"));
     }
 
     public PhotoPickerLayer clikcOnAddAvatar() {
@@ -47,9 +48,9 @@ public class HomePage implements UIComponent {
     }
 
     public AvatarShortcutMenu expandAvatarShortcutMenu() {
-        log.info("Раскрыть контекстное меню аватара");
+        log.info("Раскрываем контекстное меню аватара");
         $(EXPAND_AVATAR_MENU).shouldBe(
-                visible.because("Не отобразилась кнопка добавки фото")
+                visible.because("Не загрузилась аватарка")
         ).hover();
         return new AvatarShortcutMenu();
     }
