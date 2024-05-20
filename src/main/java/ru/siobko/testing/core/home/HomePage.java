@@ -9,7 +9,6 @@ import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.home.elements.avatar.PhotoPickerLayer;
 import ru.siobko.testing.core.user.MyUserProfilePage;
 
-
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;

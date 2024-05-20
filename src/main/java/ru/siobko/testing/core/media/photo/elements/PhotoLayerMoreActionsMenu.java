@@ -10,13 +10,12 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-
 public class PhotoLayerMoreActionsMenu extends PhotoLayer implements UIComponent {
     private static final Logger log = LoggerFactory.getLogger(PhotoLayerMoreActionsMenu.class);
 
     private static final By DELETE_PHOTO_BUTTON = byXpath(".//span[text()='Удалить фотографию']");
 
-    public PhotoLayerMoreActionsMenu(){
+    public PhotoLayerMoreActionsMenu() {
         isLoaded();
     }
 
