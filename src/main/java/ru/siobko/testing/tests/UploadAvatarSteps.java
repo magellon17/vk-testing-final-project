@@ -22,12 +22,6 @@ public class UploadAvatarSteps {
                 .confirmAvatarUploading();
     }
 
-    public void tearDown() {
-        removeAvatar();
-        removeAvatarPhotoFromProfilePage();
-        openHomePageFromProfilePage();
-    }
-
     public void removeAvatar() {
         log.info("Убираем аватар");
         new HomePage()
