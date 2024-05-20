@@ -3,7 +3,8 @@ package ru.siobko.testing.core.login;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.main.user.MyUserMainPage;
+import ru.siobko.testing.core.UIComponent;
+import ru.siobko.testing.core.home.HomePage;
 import ru.siobko.testing.models.TestBot;
 
 import static com.codeborne.selenide.Condition.exist;
@@ -12,7 +13,7 @@ import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byValue;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LoginPage {
+public class LoginPage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(LoginPage.class);
 
@@ -21,10 +22,12 @@ public class LoginPage {
     private static final By SUBMIT_BUTTON = byValue("Log in to OK");
 
     public LoginPage() {
-        checkPage();
+        isLoaded();
+        log.info("Перешли на страницу входа.");
     }
 
-    public boolean checkPage() {
+    @Override
+    public void isLoaded() throws Error {
         $(LOGIN_FIELD).shouldBe(
                 exist.because("Не отобразилось поле логина.")
         );
@@ -34,8 +37,6 @@ public class LoginPage {
         $(SUBMIT_BUTTON).shouldBe(
                 exist.because("Не отобразилась кнопка входа.")
         );
-        log.info("Перешли на страницу входа.");
-        return true;
     }
 
     public LoginPage enterLogin(String login) {
@@ -54,15 +55,15 @@ public class LoginPage {
         return this;
     }
 
-    public MyUserMainPage clickSubmit() {
+    public HomePage clickSubmit() {
         log.info("Кликаем на кнопку входа.");
         $(SUBMIT_BUTTON).shouldBe(
                 visible.because("Не отобразилась кнопка входа.")
         ).click();
-        return new MyUserMainPage();
+        return new HomePage();
     }
 
-    public MyUserMainPage login(TestBot bot) {
+    public HomePage login(TestBot bot) {
         log.info("Выполняем вход в аккаунт.");
         return enterLogin(bot.login())
                 .enterPassword(bot.password())
