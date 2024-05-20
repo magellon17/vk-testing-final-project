@@ -1,0 +1,36 @@
+package ru.siobko.testing.core.home.elements.avatar;
+
+import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import ru.siobko.testing.core.UIComponent;
+import ru.siobko.testing.core.home.HomePage;
+
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
+
+public class RemoveAvatarLayer implements UIComponent {
+
+    private static final Logger log = LoggerFactory.getLogger(PhotoPickerLayer.class);
+
+    private static final By REMOVE_AVATAR_BUTTON = byText("Убрать");
+
+    public RemoveAvatarLayer(){
+        isLoaded();
+    }
+
+    @Override
+    public void isLoaded() throws Error {
+        $(REMOVE_AVATAR_BUTTON).shouldBe(
+                visible.because(""));
+    }
+
+    public HomePage clickOnRemove() {
+        log.info("Подтверждаем удаление аватара");
+        $(REMOVE_AVATAR_BUTTON).shouldBe(
+                visible.because("Не отобразилась кнопка удаления аватара")
+        ).click();
+        return new HomePage();
+    }
+}
