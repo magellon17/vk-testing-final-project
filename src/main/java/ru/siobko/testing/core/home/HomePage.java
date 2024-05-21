@@ -7,6 +7,8 @@ import ru.siobko.testing.core.UIComponent;
 import ru.siobko.testing.core.elements.SideNavigationBlock;
 import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.home.elements.avatar.PhotoPickerLayer;
+import ru.siobko.testing.core.home.elements.publish.PublishingMenuForm;
+import ru.siobko.testing.core.media.post.PostWrapper;
 import ru.siobko.testing.core.user.MyUserProfilePage;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -24,6 +26,8 @@ public class HomePage implements UIComponent {
     private static final By UPLOAD_AVATAR_BUTTON = byClassName("lcTc_avatar_lk");
     private static final By AVATAR_BLOCK = byId("hook_Block_Avatar");
     private static final By EXPAND_AVATAR_MENU = byId("viewImageLinkId");
+    private static final By PUBLISH_BUTTON = byXpath(".//button[@data-testid='ddm-button']");
+    private static final By LAST_CREATED_POST = byId("hook_Block_MainFeedsNewFeed");
 
     public HomePage() {
         isLoaded();
@@ -63,5 +67,18 @@ public class HomePage implements UIComponent {
         log.info("Переходим на страницу профиля");
         sideNavigationBlock.clickOnMyProfile();
         return new MyUserProfilePage();
+    }
+
+    public PublishingMenuForm clickPublish() {
+        log.info("Кликаем на кнопку 'Опубликовать'.");
+        $(PUBLISH_BUTTON).shouldBe(
+                visible.because("Нет кнопки 'Опубликовать'.")
+        ).click();
+        return new PublishingMenuForm();
+    }
+
+    public PostWrapper moveToCreatedPost() {
+        log.info("Находим последний созданный пост");
+        return new PostWrapper($(LAST_CREATED_POST));
     }
 }

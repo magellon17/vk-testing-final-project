@@ -39,5 +39,4 @@ public class UploadAndRemovingAvatarSteps {
                 .deletePhoto()
                 .closeLayer();
     }
-
 }
