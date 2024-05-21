@@ -11,6 +11,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byXpath;
 
+/**
+ * Обертка над постом
+ */
 public class PostWrapper {
 
     private static final Logger log = LoggerFactory.getLogger(PostWrapper.class);

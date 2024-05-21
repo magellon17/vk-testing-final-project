@@ -9,8 +9,10 @@ import ru.siobko.testing.core.UIComponent;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
+/**
+ * Контектсное меню реакций
+ */
 public class ShortcutReactionsMenu implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(ShortcutReactionsMenu.class);

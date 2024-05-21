@@ -8,6 +8,9 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
+/**
+ * Контектсное меню собственного поста
+ */
 public class PostActionsMenu {
 
     private static final Logger log = LoggerFactory.getLogger(PostActionsMenu.class);
