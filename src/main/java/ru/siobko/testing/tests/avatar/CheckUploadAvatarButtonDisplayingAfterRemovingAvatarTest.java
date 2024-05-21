@@ -1,29 +1,35 @@
-package ru.siobko.testing.tests;
+package ru.siobko.testing.tests.avatar;
 
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
+import ru.siobko.testing.tests.BaseRequiredLoginTest;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends BaseRequiredLoginTest {
+public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends BaseRequiredLoginTest {
 
     private final UploadAndRemovingAvatarSteps steps = new UploadAndRemovingAvatarSteps();
 
     private static final String PHOTO = "src/main/java/ru/siobko/testing/tests/data/bestPhoto.jpg";
 
-    @Test
-    public void testUploadAvatarButtonHidingAfterUploadingAvatar() {
+    @BeforeEach
+    public void beforeTest() {
         steps.setAvatar(PHOTO);
+    }
+
+    @Test
+    public void testUploadAvatarButtonDisplayingAfterRemovingAvatar() {
         Selenide.refresh();
-        assertFalse(new HomePage().checkUploadAvatarButtonIsDisplayed(),
+        steps.removeAvatar();
+        assertTrue(new HomePage().checkUploadAvatarButtonIsDisplayed(),
                 "Кнопка загрузки аватара не пропала после установки аватара");
     }
 
     @AfterEach
     public void afterTest() {
-        steps.removeAvatar();
         steps.removeAvatarPhotoFromProfilePage();
         steps.openHomePageFromProfilePage();
     }
