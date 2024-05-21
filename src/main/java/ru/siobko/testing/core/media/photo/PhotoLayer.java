@@ -15,7 +15,6 @@ public class PhotoLayer implements UIComponent {
     private static final Logger log = LoggerFactory.getLogger(PhotoLayer.class);
 
     private static final By IMAGE_CONTAINER = byXpath(".//div[@data-l='t,main']");
-    private static final By IMAGE = byTagName("img");
     private static final By CLOSE_PHOTO_PAGE = byXpath(".//button[@class='panel_close__ugpyu close__ugpyu']");
     private static final By EXPAND_MORE_ACTIONS_MENU = byXpath(".//button[@class='button-clean__0wfyv action-button-container__czsac']");
 
