@@ -2,7 +2,7 @@ package ru.siobko.testing.core;
 
 public interface UIComponent {
     /**
-     * Метод, необходимый loadable элементам, для отображения перед взаимодействием
+     * Метод, необходимый loadable элементам и пейджам, для полной загрузки или отображения перед взаимодействием
      */
-    void isLoaded() throws Error;
+    void check() throws Error;
 }

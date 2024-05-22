@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
 import ru.siobko.testing.core.elements.SideNavigationBlock;
+import ru.siobko.testing.core.friends.FriendsMainPage;
 import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.home.elements.avatar.PhotoPickerLayer;
 import ru.siobko.testing.core.home.elements.publish.PublishingMenuForm;
@@ -30,11 +31,11 @@ public class HomePage implements UIComponent {
     private static final By LAST_CREATED_POST = byId("hook_Block_MainFeedsNewFeed");
 
     public HomePage() {
-        isLoaded();
+        check();
         log.info("Перешли на главную страницу пользователя");
     }
 
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(FEED_POST).shouldBe(
                 visible.because("Не отобразился первый пост ленты"));
         $(HOBBIES_CONTAINER).shouldBe(
@@ -67,6 +68,12 @@ public class HomePage implements UIComponent {
         log.info("Переходим на страницу профиля");
         sideNavigationBlock.clickOnMyProfile();
         return new MyUserProfilePage();
+    }
+
+    public FriendsMainPage openFriendsPage() {
+        log.info("Переходим на страницу друзей");
+        sideNavigationBlock.clickOnFriends();
+        return new FriendsMainPage();
     }
 
     public PublishingMenuForm clickPublish() {

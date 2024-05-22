@@ -17,11 +17,11 @@ public class RemoveAvatarLayer implements UIComponent {
     private static final By REMOVE_AVATAR_BUTTON = byText("Убрать");
 
     public RemoveAvatarLayer(){
-        isLoaded();
+        check();
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(REMOVE_AVATAR_BUTTON).shouldBe(
                 visible.because(""));
     }

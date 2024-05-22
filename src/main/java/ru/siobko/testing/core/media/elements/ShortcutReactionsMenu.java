@@ -23,12 +23,12 @@ public class ShortcutReactionsMenu implements UIComponent {
     private static final By SUPER_REACTION = byXpath(".//*[@title='Супер']");
 
     public ShortcutReactionsMenu() {
-        isLoaded();
+        check();
         log.info("Отобразилось меню реакций");
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         menu.$(SUPER_REACTION).shouldBe(
                 visible.because("Не отобразилась реакция 'Класс'"));
         menu.$(PRIVATE_KLASS_REACTION).shouldBe(

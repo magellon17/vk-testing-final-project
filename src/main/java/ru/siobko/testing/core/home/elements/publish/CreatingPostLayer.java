@@ -21,11 +21,11 @@ public class CreatingPostLayer extends HomePage implements UIComponent {
     private static final By SUBMIT_BUTTON = byXpath(".//button[@data-l='t,button.submit']");
 
     public CreatingPostLayer() {
-        isLoaded();
+        this.check();
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(SUBMIT_BUTTON).shouldBe(
                 visible.because("Не отобразилась кнопка публикации"));
         $(POST_TEXT_BOX).shouldBe(
