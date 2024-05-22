@@ -20,11 +20,11 @@ public class AvatarShortcutMenu implements UIComponent {
     private static final By DELETE_AVATAR_BUTTON = byText("Убрать фото профиля");
 
     public AvatarShortcutMenu() {
-        isLoaded();
+        check();
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         menu.$(DELETE_AVATAR_BUTTON).shouldBe(
                 visible.because(""));
     }

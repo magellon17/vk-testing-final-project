@@ -17,11 +17,11 @@ public class PhotoLayerMoreActionsMenu extends PhotoLayer implements UIComponent
     private static final By DELETE_PHOTO_BUTTON = byXpath(".//span[text()='Удалить фотографию']");
 
     public PhotoLayerMoreActionsMenu() {
-        isLoaded();
+        check();
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(DELETE_PHOTO_BUTTON).shouldBe(
                 visible.because("Не появилась кнопка для удаления фото."));
     }

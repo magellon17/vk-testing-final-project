@@ -17,12 +17,12 @@ public class PublishingMenuForm extends HomePage implements UIComponent {
     private static final By PUBLISH_POST_BUTTON = byXpath(".//*[@data-l='t,feed.posting.ui.input']");
 
     public PublishingMenuForm() {
-        isLoaded();
+        this.check();
         log.info("Открылось меню публикации медиа контента");
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(PUBLISH_POST_BUTTON).shouldBe(
                 visible.because("Не отобразилась кнопка публикации поста"));
     }

@@ -19,11 +19,11 @@ public class ChangeUserAvatarLayer implements UIComponent {
     private static final By TITLE = byText("Выберите область фотографии");
 
     public ChangeUserAvatarLayer() {
-        isLoaded();
+        check();
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(TITLE).shouldBe(
                 visible.because("Не загрузился заголовок леера"));
         log.info("Загрузился леер загрзуки аватара");

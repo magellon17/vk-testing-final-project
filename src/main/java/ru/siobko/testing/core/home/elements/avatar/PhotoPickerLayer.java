@@ -19,12 +19,12 @@ public class PhotoPickerLayer implements UIComponent {
     private static final By ENHANCE_PHOTO_BUTTON = byXpath(".//*[contains(@class,'enhance-photo-button')]");
 
     public PhotoPickerLayer(){
-        isLoaded();
+        check();
         log.info("Загрузился леер загрузки фото");
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(ENHANCE_PHOTO_BUTTON).shouldBe(
                 visible.because("Не отобразилась кнопка украски фото рамкой"));
     }

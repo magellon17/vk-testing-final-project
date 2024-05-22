@@ -19,12 +19,12 @@ public class PhotoLayer implements UIComponent {
     private static final By EXPAND_MORE_ACTIONS_MENU = byXpath(".//button[@class='button-clean__0wfyv action-button-container__czsac']");
 
     public PhotoLayer() {
-        isLoaded();
+        check();
         log.info("Загрузился фотолеер");
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(IMAGE_CONTAINER).shouldBe(
                 visible.because("Не отобразилось область под фото.")
         );

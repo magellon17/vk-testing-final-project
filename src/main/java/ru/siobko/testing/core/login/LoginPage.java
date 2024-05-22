@@ -22,12 +22,12 @@ public class LoginPage implements UIComponent {
     private static final By SUBMIT_BUTTON = byValue("Log in to OK");
 
     public LoginPage() {
-        isLoaded();
+        check();
         log.info("Перешли на страницу входа");
     }
 
     @Override
-    public void isLoaded() throws Error {
+    public void check() throws Error {
         $(LOGIN_FIELD).shouldBe(
                 exist.because("Не отобразилось поле логина")
         );
