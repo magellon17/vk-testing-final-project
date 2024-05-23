@@ -20,13 +20,13 @@ public class ChangeUserAvatarLayer implements UIComponent {
 
     public ChangeUserAvatarLayer() {
         check();
+        log.info("Загрузился леер загрзуки аватара");
     }
 
     @Override
     public void check() throws Error {
         $(TITLE).shouldBe(
                 visible.because("Не загрузился заголовок леера"));
-        log.info("Загрузился леер загрзуки аватара");
     }
 
     public HomePage confirmAvatarUploading() {

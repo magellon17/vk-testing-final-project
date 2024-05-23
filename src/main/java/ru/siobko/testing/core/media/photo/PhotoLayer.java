@@ -20,7 +20,7 @@ public class PhotoLayer implements UIComponent {
 
     public PhotoLayer() {
         check();
-        log.info("Загрузился фотолеер");
+        log.info("Открылася фотолеер");
     }
 
     @Override
