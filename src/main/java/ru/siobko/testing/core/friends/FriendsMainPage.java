@@ -15,8 +15,6 @@ public class FriendsMainPage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(FriendsMainPage.class);
 
-    private final SideNavigationBlock sideNavigationBlock = new SideNavigationBlock();
-
     private static final By FRIENDS_SEARCH_CONTAINER = byXpath(".//*[contains(@class, 'search-container')]");
 
     public FriendsMainPage() {

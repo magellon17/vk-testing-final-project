@@ -18,7 +18,7 @@ public class PhotoPickerLayer implements UIComponent {
     private static final By UPLOAD_PHOTO_FROM_DEVICE = byXpath(".//input[@accept='.jpg,.jpeg,.png,.gif,.heic,.mov,video/mp4,video/x-m4v,video/*']");
     private static final By ENHANCE_PHOTO_BUTTON = byXpath(".//*[contains(@class,'enhance-photo-button')]");
 
-    public PhotoPickerLayer(){
+    public PhotoPickerLayer() {
         check();
         log.info("Загрузился леер загрузки фото");
     }

@@ -43,7 +43,7 @@ public class UserPreviewWindow implements UIComponent {
 
     public boolean isSentFriendRequestTitleDisplaying() {
         return menu.$(SENT_FRIEND_REQUEST_TITLE).shouldBe(
-                visible.because("Не отобразилась кнопка 'Дружить'")
+                visible.because("Не отобразился заголовок 'Запрос отправлен'")
         ).isDisplayed();
     }
 }

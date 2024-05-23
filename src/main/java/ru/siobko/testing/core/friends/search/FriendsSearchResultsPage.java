@@ -18,7 +18,7 @@ public class FriendsSearchResultsPage implements UIComponent {
     private static final By GLOBAL_SEARCH_BLOCK = By.id("hook_Block_MyFriendsGlobalSearchPagingB");
     private static final By USER_CARDS_RESULT_LIST = By.className("gs_result_list");
 
-    public FriendsSearchResultsPage(){
+    public FriendsSearchResultsPage() {
         check();
         log.info("Открылась страница с результатами поиска человека среди друзей(и не только)");
     }

@@ -21,12 +21,13 @@ public class AvatarShortcutMenu implements UIComponent {
 
     public AvatarShortcutMenu() {
         check();
+        log.info("Открылось контекстное меню аватара");
     }
 
     @Override
     public void check() throws Error {
         menu.$(DELETE_AVATAR_BUTTON).shouldBe(
-                visible.because(""));
+                visible.because("Не отобразилась кнопка удаления аватара"));
     }
 
     public RemoveAvatarLayer clickOnRemoveUserAvatar() {

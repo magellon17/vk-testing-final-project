@@ -18,6 +18,7 @@ public class PhotoLayerMoreActionsMenu extends PhotoLayer implements UIComponent
 
     public PhotoLayerMoreActionsMenu() {
         check();
+        log.info("Открылось меню дополнительных действий с фотографией");
     }
 
     @Override

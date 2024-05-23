@@ -21,7 +21,8 @@ public class CreatingPostLayer extends HomePage implements UIComponent {
     private static final By SUBMIT_BUTTON = byXpath(".//button[@data-l='t,button.submit']");
 
     public CreatingPostLayer() {
-        this.check();
+        check();
+        log.info("Загрузилась форма для написания и публикации поста");
     }
 
     @Override
@@ -30,7 +31,6 @@ public class CreatingPostLayer extends HomePage implements UIComponent {
                 visible.because("Не отобразилась кнопка публикации"));
         $(POST_TEXT_BOX).shouldBe(
                 visible.because("Не отобразилось поле ввода текста поста"));
-        log.info("Загрузилась форма для написания и публикации поста");
     }
 
     public CreatingPostLayer enterPostText(String postText) {

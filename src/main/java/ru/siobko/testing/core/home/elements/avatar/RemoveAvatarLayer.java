@@ -18,12 +18,13 @@ public class RemoveAvatarLayer implements UIComponent {
 
     public RemoveAvatarLayer(){
         check();
+        log.info("Открылся леер удаления аватара");
     }
 
     @Override
     public void check() throws Error {
         $(REMOVE_AVATAR_BUTTON).shouldBe(
-                visible.because(""));
+                visible.because("Не отобразилась кнопка удаления аватара"));
     }
 
     public HomePage clickOnRemove() {
