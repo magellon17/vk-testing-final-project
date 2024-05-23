@@ -47,6 +47,14 @@ public class SendFriendRequestFromFriendsSearchPageSteps {
                 .clickOnSendFriendRequest();
     }
 
+    public void sendFriendRequestToUserViaUserPreviewWindow() {
+        log.info("Отправляем запрос в друзья пользователю {} через превью окошко пользователя", username);
+        new FriendsSearchResultsPage()
+                .getUserCardByName(username)
+                .expandUserPreviewWindowViaHoveringOnUsername()
+                .clickOnMakeFriendshipButton();
+    }
+
     public void openUserProfilePage() {
         log.info("Открываем страницу профиля пользователя {}", username);
         new FriendsSearchResultsPage()
