@@ -19,7 +19,7 @@ public class LoginPage implements UIComponent {
 
     private static final By LOGIN_FIELD = byName("st.email");
     private static final By PASSWORD_FIELD = byName("st.password");
-    private static final By SUBMIT_BUTTON = byValue("Log in to OK");
+    private static final By SUBMIT_BUTTON = byValue("Войти в Одноклассники");
 
     public LoginPage() {
         check();

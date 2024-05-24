@@ -19,6 +19,7 @@ public abstract class UITest {
     public static void setUp() {
         Configuration.browser = BROWSER;
         Configuration.baseUrl = BASE_URL;
+        System.setProperty("chromeoptions.prefs","intl.accept_languages=ru");
         clearBrowserCache();
         Selenide.open("/");
     }
