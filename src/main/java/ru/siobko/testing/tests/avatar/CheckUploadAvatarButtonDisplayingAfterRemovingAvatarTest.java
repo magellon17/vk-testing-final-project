@@ -5,11 +5,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.tests.BaseRequiredLoginTest;
+import ru.siobko.testing.tests.RequiredLoginTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends BaseRequiredLoginTest {
+public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends RequiredLoginTest {
 
     private final UploadAndRemovingAvatarSteps steps = new UploadAndRemovingAvatarSteps();
 

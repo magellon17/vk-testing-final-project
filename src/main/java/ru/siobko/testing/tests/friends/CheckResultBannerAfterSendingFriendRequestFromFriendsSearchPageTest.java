@@ -4,11 +4,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.friends.search.FriendsSearchResultsPage;
-import ru.siobko.testing.tests.BaseRequiredLoginTest;
+import ru.siobko.testing.tests.RequiredLoginTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CheckResultBannerAfterSendingFriendRequestFromFriendsSearchPageTest extends BaseRequiredLoginTest {
+public class CheckResultBannerAfterSendingFriendRequestFromFriendsSearchPageTest extends RequiredLoginTest {
 
     private final SendFriendRequestFromFriendsSearchPageSteps steps =
             new SendFriendRequestFromFriendsSearchPageSteps(BOT2.login());

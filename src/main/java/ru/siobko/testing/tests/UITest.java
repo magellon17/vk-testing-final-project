@@ -7,7 +7,7 @@ import ru.siobko.testing.models.TestBot;
 
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-public abstract class BaseTest {
+public abstract class UITest {
 
     protected static final String BROWSER = "chrome";
     protected static final String BASE_URL = "https://ok.ru";
@@ -19,8 +19,8 @@ public abstract class BaseTest {
     public static void setUp() {
         Configuration.browser = BROWSER;
         Configuration.baseUrl = BASE_URL;
-        Selenide.open("/");
         clearBrowserCache();
+        Selenide.open("/");
     }
 
     @AfterAll

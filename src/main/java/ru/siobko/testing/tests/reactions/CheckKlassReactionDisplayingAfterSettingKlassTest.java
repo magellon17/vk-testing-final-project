@@ -5,11 +5,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
 import ru.siobko.testing.core.media.post.PostWrapper;
-import ru.siobko.testing.tests.BaseRequiredLoginTest;
+import ru.siobko.testing.tests.RequiredLoginTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CheckKlassReactionDisplayingAfterSettingKlassTest extends BaseRequiredLoginTest {
+public class CheckKlassReactionDisplayingAfterSettingKlassTest extends RequiredLoginTest {
 
     private final CheckPostReactionsSteps steps = new CheckPostReactionsSteps();
 
@@ -19,9 +19,10 @@ public class CheckKlassReactionDisplayingAfterSettingKlassTest extends BaseRequi
     }
 
     @Test
-    public void testOnCheckKlassReactionDisplayingAfterSettingKlassTest() {
+    public void testOnKlassReactionDisplayingAfterSettingKlassTest() {
         steps.setKlassToCreatedPost();
-        PostWrapper post = new HomePage().moveToCreatedPost();
+        PostWrapper post = new HomePage()
+                .moveToCreatedPost();
         assertTrue(post.isReactionSet(),
                 "Реакция на пост не отобразилась");
     }
