@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.friends.search.FriendsSearchResultsPage;
 import ru.siobko.testing.tests.RequiredLoginTest;
+import ru.siobko.testing.tests.friends.steps.SendFriendRequestFromFriendsSearchPageSteps;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

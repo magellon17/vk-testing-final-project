@@ -1,4 +1,4 @@
-package ru.siobko.testing.tests.friends;
+package ru.siobko.testing.tests.friends.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

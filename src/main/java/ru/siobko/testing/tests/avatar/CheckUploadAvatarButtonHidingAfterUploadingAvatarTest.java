@@ -5,6 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
 import ru.siobko.testing.tests.RequiredLoginTest;
+import ru.siobko.testing.tests.avatar.steps.UploadAndRemovingAvatarSteps;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
