@@ -21,7 +21,7 @@ public class UserProfilePage implements UIComponent {
 
     protected static final By OPEN_LATEST_USER_PHOTO = byXpath(".//*[@data-l='targetPosition,0']");
 
-    private static final By SEND_MESSAGE_BUTTON = byXpath(".//*[contains(@hrefattrs,'FriendTopCardButtonsSendMessage')]");
+    private static final By SEND_MESSAGE_BTN = byXpath(".//*[contains(@hrefattrs,'FriendTopCardButtonsSendMessage')]");
     private static final By EXPAND_FRIEND_RELATIONS_SELECTOR = byXpath(".//*[@aria-label='Запрос отправлен']");
 
     public UserProfilePage() {
@@ -31,7 +31,7 @@ public class UserProfilePage implements UIComponent {
 
     @Override
     public void check() throws Error {
-        $(SEND_MESSAGE_BUTTON).shouldBe(
+        $(SEND_MESSAGE_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка отправки сообщения"));
     }
 

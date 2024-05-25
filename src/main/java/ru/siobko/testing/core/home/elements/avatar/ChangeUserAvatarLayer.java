@@ -15,7 +15,7 @@ public class ChangeUserAvatarLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(ChangeUserAvatarLayer.class);
 
-    private static final By CONFIRM = byXpath(".//span[text()='Установить']");
+    private static final By CONFIRM_BTN = byXpath(".//span[text()='Установить']");
     private static final By TITLE = byText("Выберите область фотографии");
 
     public ChangeUserAvatarLayer() {
@@ -31,7 +31,7 @@ public class ChangeUserAvatarLayer implements UIComponent {
 
     public HomePage confirmAvatarUploading() {
         log.info("Загружаем фото аватара");
-        $(CONFIRM).shouldBe(
+        $(CONFIRM_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка загрузки фото")
         ).click();
         return new HomePage();

@@ -5,14 +5,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.user.elements.UserPreviewWindow;
 import ru.siobko.testing.tests.RequiredLoginTest;
-import ru.siobko.testing.tests.friends.steps.SendFriendRequestFromFriendsSearchPageSteps;
+import ru.siobko.testing.tests.friends.steps.SendFriendRequestFromFriendSearchResultsPageSteps;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CheckResultBannerDisplayingAfterSendingFriendRequestViaUserPreviewWindowTest extends RequiredLoginTest {
 
-    private final SendFriendRequestFromFriendsSearchPageSteps steps =
-            new SendFriendRequestFromFriendsSearchPageSteps(BOT2.login());
+    private final SendFriendRequestFromFriendSearchResultsPageSteps steps =
+            new SendFriendRequestFromFriendSearchResultsPageSteps(BOT2.login());
 
     @BeforeEach
     public void beforeTest() {

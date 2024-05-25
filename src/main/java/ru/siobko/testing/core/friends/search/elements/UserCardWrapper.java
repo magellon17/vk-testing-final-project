@@ -16,7 +16,7 @@ public class UserCardWrapper {
 
     private final SelenideElement card;
 
-    private static final By SEND_FRIEND_REQUEST_BUTTON = By.xpath(".//*[contains(@href,'FriendSearch_add')]");
+    private static final By SEND_FRIEND_REQUEST_BTN = By.xpath(".//*[contains(@href,'FriendSearch_add')]");
     private static final By SENT_FRIEND_REQUEST_BANNER = byText("Запрос отправлен");
     private static final By USERNAME = By.xpath(".//*[contains(@hrefattrs,'FriendSearch_name')]");
 
@@ -26,7 +26,7 @@ public class UserCardWrapper {
 
     public UserCardWrapper clickOnSendFriendRequest() {
         log.info("Кликаем на кнопку 'Добавить в друзья'");
-        card.$(SEND_FRIEND_REQUEST_BUTTON).shouldBe(
+        card.$(SEND_FRIEND_REQUEST_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка отправки заявки в друзья")
         ).click();
         return this;

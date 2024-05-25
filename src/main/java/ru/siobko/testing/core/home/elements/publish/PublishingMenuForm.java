@@ -14,7 +14,7 @@ public class PublishingMenuForm extends HomePage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PublishingMenuForm.class);
 
-    private static final By PUBLISH_POST_BUTTON = byXpath(".//*[@data-l='t,feed.posting.ui.input']");
+    private static final By PUBLISH_POST_BTN = byXpath(".//*[@data-l='t,feed.posting.ui.input']");
 
     public PublishingMenuForm() {
         this.check();
@@ -23,13 +23,13 @@ public class PublishingMenuForm extends HomePage implements UIComponent {
 
     @Override
     public void check() throws Error {
-        $(PUBLISH_POST_BUTTON).shouldBe(
+        $(PUBLISH_POST_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка публикации поста"));
     }
 
     public CreatingPostLayer clickOnPublishPost() {
         log.info("Кликаем на кнопку публикации поста.");
-        $(PUBLISH_POST_BUTTON).shouldBe(
+        $(PUBLISH_POST_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка публикации поста.")
         ).click();
         return new CreatingPostLayer();

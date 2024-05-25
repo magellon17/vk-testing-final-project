@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
+import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.core.elements.SideNavigationBlock;
 import ru.siobko.testing.core.friends.FriendsMainPage;
 import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
@@ -24,11 +25,12 @@ public class HomePage implements UIComponent {
 
     private static final By FEED_POST = byClassName("feed-w");
     private static final By HOBBIES_CONTAINER = byXpath(".//div[@data-l='t,hobbies.content']");
-    private static final By UPLOAD_AVATAR_BUTTON = byClassName("lcTc_avatar_lk");
+    private static final By UPLOAD_AVATAR_BTN = byClassName("lcTc_avatar_lk");
     private static final By AVATAR_BLOCK = byId("hook_Block_Avatar");
     private static final By EXPAND_AVATAR_MENU = byId("viewImageLinkId");
     private static final By PUBLISH_BUTTON = byXpath(".//button[@data-testid='ddm-button']");
     private static final By LAST_CREATED_POST = byId("hook_Block_MainFeedsNewFeed");
+    private static final By GLOBAL_SEARCH_CONTAINER = byXpath(".//*[@data-l='t,search']");
 
     public HomePage() {
         check();
@@ -46,7 +48,7 @@ public class HomePage implements UIComponent {
 
     public PhotoPickerLayer clikcOnAddAvatar() {
         log.info("Кликаем на 'Добавить фото' в кружочке аватара.");
-        $(UPLOAD_AVATAR_BUTTON).shouldBe(
+        $(UPLOAD_AVATAR_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка добавки фото")
         ).click();
         return new PhotoPickerLayer();
@@ -61,7 +63,7 @@ public class HomePage implements UIComponent {
     }
 
     public boolean checkUploadAvatarButtonIsDisplayed() {
-        return $(UPLOAD_AVATAR_BUTTON).isDisplayed();
+        return $(UPLOAD_AVATAR_BTN).isDisplayed();
     }
 
     public MyUserProfilePage openProfilePage() {
@@ -87,5 +89,13 @@ public class HomePage implements UIComponent {
     public PostWrapper moveToCreatedPost() {
         log.info("Находим последний созданный пост");
         return new PostWrapper($(LAST_CREATED_POST));
+    }
+
+    public GlobalSearchWrapper expandGlobalSearch() {
+        log.info("Раскрываем поисковик по сайту");
+        $(GLOBAL_SEARCH_CONTAINER).shouldBe(
+                visible.because("Не отобразился поисковик по сайту")
+        ).click();
+        return new GlobalSearchWrapper();
     }
 }

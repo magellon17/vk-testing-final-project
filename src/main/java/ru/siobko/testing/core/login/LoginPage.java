@@ -19,7 +19,7 @@ public class LoginPage implements UIComponent {
 
     private static final By LOGIN_FIELD = byName("st.email");
     private static final By PASSWORD_FIELD = byName("st.password");
-    private static final By SUBMIT_BUTTON = byValue("Войти в Одноклассники");
+    private static final By SUBMIT_BTN = byValue("Войти в Одноклассники");
 
     public LoginPage() {
         check();
@@ -34,7 +34,7 @@ public class LoginPage implements UIComponent {
         $(PASSWORD_FIELD).shouldBe(
                 exist.because("Не отобразилось поле пароля")
         );
-        $(SUBMIT_BUTTON).shouldBe(
+        $(SUBMIT_BTN).shouldBe(
                 exist.because("Не отобразилась кнопка входа")
         );
     }
@@ -57,7 +57,7 @@ public class LoginPage implements UIComponent {
 
     public HomePage clickSubmit() {
         log.info("Кликаем на кнопку входа");
-        $(SUBMIT_BUTTON).shouldBe(
+        $(SUBMIT_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка входа")
         ).click();
         return new HomePage();

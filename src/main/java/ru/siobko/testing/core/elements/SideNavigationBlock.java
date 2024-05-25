@@ -18,27 +18,27 @@ public class SideNavigationBlock {
 
     private final SelenideElement block = $(byId("hook_Block_SideNavigation"));
 
-    private static final By MY_PROFILE_BUTTON = byXpath(".//a[@data-l='t,userPage']");
-    private static final By HOME_BUTTON = byText("Лента");
-    private static final By FRIENDS_BUTTON = byText("Друзья");
+    private static final By MY_PROFILE_BTN = byXpath(".//a[@data-l='t,userPage']");
+    private static final By HOME_BTN = byText("Лента");
+    private static final By FRIENDS_BTN = byText("Друзья");
 
     public void clickOnHome() {
         log.info("Кликаем на кнопку 'Лента'");
-        block.$(HOME_BUTTON).shouldBe(
+        block.$(HOME_BTN).shouldBe(
                 visible.because("Нет кнопки для перехода на ленту")
         ).click();
     }
 
     public void clickOnMyProfile() {
         log.info("Кликаем на мой профиль");
-        block.$(MY_PROFILE_BUTTON).shouldBe(
+        block.$(MY_PROFILE_BTN).shouldBe(
                 visible.because("Нет кнопки для перехода в профиль")
         ).click();
     }
 
     public void clickOnFriends() {
         log.info("Кликаем на кнопку 'Друзья'");
-        block.$(FRIENDS_BUTTON).shouldBe(
+        block.$(FRIENDS_BTN).shouldBe(
                 visible.because("Нет кнопки для перехода на страницу друзей")
         ).click();
     }
