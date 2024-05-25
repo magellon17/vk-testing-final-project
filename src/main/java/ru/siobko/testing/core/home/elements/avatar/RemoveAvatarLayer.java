@@ -14,7 +14,7 @@ public class RemoveAvatarLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PhotoPickerLayer.class);
 
-    private static final By REMOVE_AVATAR_BUTTON = byText("Убрать");
+    private static final By REMOVE_AVATAR_BTN = byText("Убрать");
 
     public RemoveAvatarLayer(){
         check();
@@ -23,13 +23,13 @@ public class RemoveAvatarLayer implements UIComponent {
 
     @Override
     public void check() throws Error {
-        $(REMOVE_AVATAR_BUTTON).shouldBe(
+        $(REMOVE_AVATAR_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка удаления аватара"));
     }
 
     public HomePage clickOnRemove() {
         log.info("Подтверждаем удаление аватара");
-        $(REMOVE_AVATAR_BUTTON).shouldBe(
+        $(REMOVE_AVATAR_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка удаления аватара")
         ).click();
         return new HomePage();

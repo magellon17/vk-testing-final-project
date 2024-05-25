@@ -20,7 +20,7 @@ public class UserPreviewWindow implements UIComponent {
     private final SelenideElement menu = $(byId("hook_Block_ShortcutMenu"));
 
     private static final By USERNAME = byXpath(".//*[contains(@hrefattrs, 'User_SM_Visit')]");
-    private static final By MAKE_FRIEND_BUTTON = byText("Дружить");
+    private static final By MAKE_FRIEND_BTN = byText("Дружить");
     private static final By SENT_FRIEND_REQUEST_TITLE = byText("Запрос отправлен");
 
     public UserPreviewWindow(){
@@ -35,7 +35,7 @@ public class UserPreviewWindow implements UIComponent {
     }
 
     public UserPreviewWindow clickOnMakeFriendshipButton() {
-        menu.$(MAKE_FRIEND_BUTTON).shouldBe(
+        menu.$(MAKE_FRIEND_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка 'Дружить'")
         ).click();
         return this;

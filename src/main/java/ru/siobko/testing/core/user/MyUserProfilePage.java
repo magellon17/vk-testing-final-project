@@ -13,7 +13,7 @@ public class MyUserProfilePage extends UserProfilePage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(MyUserProfilePage.class);
 
-    private static final By SETTINGS_BUTTON = byXpath(".//*[@data-l='outlandertarget,settings,t,settings']");
+    private static final By SETTINGS_BTN = byXpath(".//*[@data-l='outlandertarget,settings,t,settings']");
 
     public MyUserProfilePage() {
         check();
@@ -22,7 +22,7 @@ public class MyUserProfilePage extends UserProfilePage implements UIComponent {
 
     @Override
     public void check() throws Error {
-        $(SETTINGS_BUTTON).shouldBe(
+        $(SETTINGS_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка настроек"));
     }
 }

@@ -1,4 +1,4 @@
-package ru.siobko.testing.tests.avatar;
+package ru.siobko.testing.tests.avatar.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

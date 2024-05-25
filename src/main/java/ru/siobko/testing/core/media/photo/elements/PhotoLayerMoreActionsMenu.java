@@ -14,7 +14,7 @@ public class PhotoLayerMoreActionsMenu extends PhotoLayer implements UIComponent
 
     private static final Logger log = LoggerFactory.getLogger(PhotoLayerMoreActionsMenu.class);
 
-    private static final By DELETE_PHOTO_BUTTON = byXpath(".//span[text()='Удалить фотографию']");
+    private static final By DELETE_PHOTO_BTN = byXpath(".//span[text()='Удалить фотографию']");
 
     public PhotoLayerMoreActionsMenu() {
         check();
@@ -23,13 +23,13 @@ public class PhotoLayerMoreActionsMenu extends PhotoLayer implements UIComponent
 
     @Override
     public void check() throws Error {
-        $(DELETE_PHOTO_BUTTON).shouldBe(
+        $(DELETE_PHOTO_BTN).shouldBe(
                 visible.because("Не появилась кнопка для удаления фото."));
     }
 
     public PhotoLayer deletePhoto() {
         log.info("Удаляем фото.");
-        $(DELETE_PHOTO_BUTTON).shouldBe(
+        $(DELETE_PHOTO_BTN).shouldBe(
                 visible.because("Не появилась кнопка для удаления фото.")
         ).click();
         return this;

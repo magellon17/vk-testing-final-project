@@ -15,8 +15,8 @@ public class PhotoPickerLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PhotoPickerLayer.class);
 
-    private static final By UPLOAD_PHOTO_FROM_DEVICE = byXpath(".//input[@accept='.jpg,.jpeg,.png,.gif,.heic,.mov,video/mp4,video/x-m4v,video/*']");
-    private static final By ENHANCE_PHOTO_BUTTON = byXpath(".//*[contains(@class,'enhance-photo-button')]");
+    private static final By UPLOAD_FROM_DEVICE_INPUT = byXpath(".//input[@accept='.jpg,.jpeg,.png,.gif,.heic,.mov,video/mp4,video/x-m4v,video/*']");
+    private static final By ENHANCE_PHOTO_BTN = byXpath(".//*[contains(@class,'enhance-photo-button')]");
 
     public PhotoPickerLayer() {
         check();
@@ -25,13 +25,13 @@ public class PhotoPickerLayer implements UIComponent {
 
     @Override
     public void check() throws Error {
-        $(ENHANCE_PHOTO_BUTTON).shouldBe(
+        $(ENHANCE_PHOTO_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка украски фото рамкой"));
     }
 
     public ChangeUserAvatarLayer uploadAvatarPhoto(String filename) {
         log.info("Загружаем фото аватара");
-        $(UPLOAD_PHOTO_FROM_DEVICE)
+        $(UPLOAD_FROM_DEVICE_INPUT)
                 .uploadFile(new File(filename));
         return new ChangeUserAvatarLayer();
     }

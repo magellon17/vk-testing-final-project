@@ -1,4 +1,4 @@
-package ru.siobko.testing.tests.reactions;
+package ru.siobko.testing.tests.reactions.steps;
 
 import net.bytebuddy.utility.RandomString;
 import org.slf4j.Logger;

@@ -17,8 +17,8 @@ public class CreatingPostLayer extends HomePage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(CreatingPostLayer.class);
 
-    private static final By POST_TEXT_BOX = byXpath(".//div[@data-module='postingForm/mediaText']");
-    private static final By SUBMIT_BUTTON = byXpath(".//button[@data-l='t,button.submit']");
+    private static final By TEXT_BOX = byXpath(".//div[@data-module='postingForm/mediaText']");
+    private static final By SUBMIT_BTN = byXpath(".//button[@data-l='t,button.submit']");
 
     public CreatingPostLayer() {
         check();
@@ -27,15 +27,15 @@ public class CreatingPostLayer extends HomePage implements UIComponent {
 
     @Override
     public void check() throws Error {
-        $(SUBMIT_BUTTON).shouldBe(
+        $(SUBMIT_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка публикации"));
-        $(POST_TEXT_BOX).shouldBe(
+        $(TEXT_BOX).shouldBe(
                 visible.because("Не отобразилось поле ввода текста поста"));
     }
 
     public CreatingPostLayer enterPostText(String postText) {
         log.info("Вводим текст поста");
-        $(POST_TEXT_BOX).shouldBe(
+        $(TEXT_BOX).shouldBe(
                 visible.because("Не отобразилось поле ввода текста поста")
         ).setValue(postText);
         return this;
@@ -43,7 +43,7 @@ public class CreatingPostLayer extends HomePage implements UIComponent {
 
     public HomePage clickSubmit() {
         log.info("Публикуем пост");
-        $(SUBMIT_BUTTON).shouldBe(
+        $(SUBMIT_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка подтвержденря публикации поста.")
         ).click();
         return this;

@@ -4,11 +4,12 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.tests.BaseRequiredLoginTest;
+import ru.siobko.testing.tests.RequiredLoginTest;
+import ru.siobko.testing.tests.avatar.steps.UploadAndRemovingAvatarSteps;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends BaseRequiredLoginTest {
+public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends RequiredLoginTest {
 
     private final UploadAndRemovingAvatarSteps steps = new UploadAndRemovingAvatarSteps();
 

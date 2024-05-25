@@ -15,10 +15,10 @@ public class PostActionsMenu {
 
     private static final Logger log = LoggerFactory.getLogger(PostActionsMenu.class);
 
-    private static final By DELETE_POST_BUTTON = byXpath(".//*[contains(@hrefattrs, 'StatusLayer_deleteButton')]");
+    private static final By DELETE_POST_BTN = byXpath(".//*[contains(@hrefattrs, 'StatusLayer_deleteButton')]");
 
     public void clickOnDelete() {
         log.info("Кликаем на кнопку 'Удалить заметку'");
-        executeJavaScript("arguments[0].click();", $(DELETE_POST_BUTTON));
+        executeJavaScript("arguments[0].click();", $(DELETE_POST_BTN));
     }
 }

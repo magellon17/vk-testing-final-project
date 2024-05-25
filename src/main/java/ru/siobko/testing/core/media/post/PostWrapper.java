@@ -20,8 +20,8 @@ public class PostWrapper {
 
     private final SelenideElement post;
 
-    private static final By REACTIONS_BUTTON = byXpath(".//*[@aria-label='Поставить класс']");
-    private static final By REMOVE_REACTION_BUTTON = byXpath(".//*[@aria-label='Снять класс']");
+    private static final By REACTIONS_BTN = byXpath(".//*[@aria-label='Поставить класс']");
+    private static final By REMOVE_REACTION_BTN = byXpath(".//*[@aria-label='Снять класс']");
     private static final By EXPAND_ACTIONS_MENU = byClassName("feed-action");
 
     public PostWrapper(SelenideElement postElement) {
@@ -30,18 +30,18 @@ public class PostWrapper {
 
     public ShortcutReactionsMenu expandReactionsListMenu() {
         log.info("Открываем меню реакций");
-        post.$(REACTIONS_BUTTON).shouldBe(
+        post.$(REACTIONS_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка 'Класс'")
         ).hover();
         return new ShortcutReactionsMenu();
     }
 
     public boolean isReactionSet() {
-        return post.$(REMOVE_REACTION_BUTTON).isDisplayed();
+        return post.$(REMOVE_REACTION_BTN).isDisplayed();
     }
 
     public void setKlass() {
-        post.$(REACTIONS_BUTTON).shouldBe(
+        post.$(REACTIONS_BTN).shouldBe(
                 visible.because("Не отобразилась кнопка 'Класс'")
         ).click();
     }

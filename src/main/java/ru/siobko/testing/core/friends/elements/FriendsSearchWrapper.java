@@ -9,14 +9,14 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-public class FriendsSearchWideContainer implements UIComponent {
+public class FriendsSearchWrapper implements UIComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(FriendsSearchWideContainer.class);
+    private static final Logger log = LoggerFactory.getLogger(FriendsSearchWrapper.class);
 
     private static final By FRIENDS_SEARCH_FIELD = byXpath(".//*[@placeholder='Искать друзей']");
     private static final By SEARCH_ICON = byXpath(".//*[contains(@name,'ico_search')]");
 
-    public FriendsSearchWideContainer() {
+    public FriendsSearchWrapper() {
         check();
         log.info("Отркылся расширенный поисковик по друзьям(и не только)");
     }
@@ -29,7 +29,7 @@ public class FriendsSearchWideContainer implements UIComponent {
                 visible.because("Не отобразилась иконка поиска(лупа)"));
     }
 
-    public FriendsSearchWideContainer setText(String text) {
+    public FriendsSearchWrapper setText(String text) {
         $(FRIENDS_SEARCH_FIELD).shouldBe(
                 visible.because("Не отобразилось поле ввода поисковика")
         ).setValue(text);
