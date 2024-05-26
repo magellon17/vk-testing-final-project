@@ -25,7 +25,7 @@ public class CheckResultBannerDisplayingAfterSendingFriendRequestViaUserPreviewW
     public void testOnResultBannerDisplayingAfterSendingFriendRequestViaUserPreviewWindow() {
         steps.sendFriendRequestToUserViaUserPreviewWindow();
         assertTrue(new UserPreviewWindow().isSentFriendRequestTitleDisplaying(),
-                "Не отобразилась надпись 'Запрос отправлен' после отправки запроса в друзья");
+                "Не отобразилась надпись 'Запрос отправлен' в превью окошке пользователя");
     }
 
     @AfterEach

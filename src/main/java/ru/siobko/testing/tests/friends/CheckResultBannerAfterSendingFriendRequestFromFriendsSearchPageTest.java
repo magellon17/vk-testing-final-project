@@ -25,7 +25,7 @@ public class CheckResultBannerAfterSendingFriendRequestFromFriendsSearchPageTest
     public void testOnCheckingResultBannerAfterSendingFriendRequest() {
         steps.sendFriendRequest();
         assertTrue(new FriendsSearchResultsPage().getUserCardByName(BOT2.login()).isSentFriendRequestBannerDisplayed(),
-                "Не отобразилась надпись 'Запрос отправлен' после отправки запроса в друзья");
+                "Не отобразилась надпись 'Запрос отправлен' на карточке пользователя");
     }
 
     @AfterEach
