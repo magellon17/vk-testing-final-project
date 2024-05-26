@@ -27,7 +27,7 @@ public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends Re
     public void testUploadAvatarButtonDisplayingAfterRemovingAvatar() {
         Selenide.refresh();
         steps.removeAvatar();
-        assertTrue(new HomePage().checkUploadAvatarButtonIsDisplayed(),
+        assertTrue(new HomePage().isUploadAvatarButtonDisplayed(),
                 "Кнопка загрузки аватара не пропала после установки аватара");
     }
 
