@@ -21,7 +21,7 @@ public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends Requi
     public void testUploadAvatarButtonHidingAfterUploadingAvatar() {
         steps.setAvatar(PHOTO);
         Selenide.refresh();
-        assertFalse(new HomePage().checkUploadAvatarButtonIsDisplayed(),
+        assertFalse(new HomePage().isUploadAvatarButtonDisplayed(),
                 "Кнопка загрузки аватара не пропала после установки аватара");
     }
 
