@@ -31,6 +31,8 @@ public class HomePage implements UIComponent {
     private static final By PUBLISH_BUTTON = byXpath(".//button[@data-testid='ddm-button']");
     private static final By LAST_CREATED_POST = byId("hook_Block_MainFeedsNewFeed");
     private static final By GLOBAL_SEARCH_CONTAINER = byXpath(".//*[@data-l='t,search']");
+    private static final By PUBLISHED_POST_NOTIFY
+            = byXpath(".//*[@class='tip __l __active __action-tip __bot __toast __fixed h-mod']");
 
     public HomePage() {
         check();
@@ -62,8 +64,12 @@ public class HomePage implements UIComponent {
         return new AvatarShortcutMenu();
     }
 
-    public boolean checkUploadAvatarButtonIsDisplayed() {
-        return $(UPLOAD_AVATAR_BTN).isDisplayed();
+    public boolean isUploadAvatarButtonDisplayed() {
+        return $(UPLOAD_AVATAR_BTN).shouldBe(visible).isDisplayed();
+    }
+
+    public boolean isPublishedPostNotifyDisplayed() {
+        return $(PUBLISHED_POST_NOTIFY).shouldBe(visible).isDisplayed();
     }
 
     public MyUserProfilePage openProfilePage() {
