@@ -2,6 +2,7 @@ package ru.siobko.testing.tests.friends;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.user.elements.UserPreviewWindow;
 import ru.siobko.testing.tests.RequiredLoginTest;
@@ -20,6 +21,7 @@ public class CheckResultBannerDisplayingAfterSendingFriendRequestViaUserPreviewW
     }
 
     @Test
+    @Tag("friends")
     public void testOnResultBannerDisplayingAfterSendingFriendRequestViaUserPreviewWindow() {
         steps.sendFriendRequestToUserViaUserPreviewWindow();
         assertTrue(new UserPreviewWindow().isSentFriendRequestTitleDisplaying(),

@@ -3,6 +3,7 @@ package ru.siobko.testing.tests.avatar;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
 import ru.siobko.testing.tests.RequiredLoginTest;
@@ -22,6 +23,7 @@ public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends Re
     }
 
     @Test
+    @Tag("avatar")
     public void testUploadAvatarButtonDisplayingAfterRemovingAvatar() {
         Selenide.refresh();
         steps.removeAvatar();

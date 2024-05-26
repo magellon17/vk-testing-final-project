@@ -2,6 +2,7 @@ package ru.siobko.testing.tests.friends;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.friends.search.FriendsSearchResultsPage;
 import ru.siobko.testing.tests.RequiredLoginTest;
@@ -20,6 +21,7 @@ public class CheckResultBannerAfterSendingFriendRequestFromFriendsSearchPageTest
     }
 
     @Test
+    @Tag("friends")
     public void testOnCheckingResultBannerAfterSendingFriendRequest() {
         steps.sendFriendRequest();
         assertTrue(new FriendsSearchResultsPage().getUserCardByName(BOT2.login()).isSentFriendRequestBannerDisplayed(),
