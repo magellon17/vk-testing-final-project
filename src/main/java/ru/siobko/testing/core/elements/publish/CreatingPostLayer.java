@@ -1,4 +1,4 @@
-package ru.siobko.testing.core.home.elements.publish;
+package ru.siobko.testing.core.elements.publish;
 
 import org.openqa.selenium.By;
 import org.slf4j.Logger;

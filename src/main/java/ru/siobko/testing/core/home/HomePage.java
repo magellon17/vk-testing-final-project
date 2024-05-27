@@ -11,10 +11,9 @@ import ru.siobko.testing.core.friends.FriendsPagePromise;
 import ru.siobko.testing.core.hobbies.HobbiesPagePromise;
 import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.home.elements.avatar.PhotoPickerLayer;
-import ru.siobko.testing.core.home.elements.publish.PublishingMenuForm;
+import ru.siobko.testing.core.elements.publish.PublishingMenuForm;
 import ru.siobko.testing.core.media.post.PostWrapper;
 import ru.siobko.testing.core.users.myUser.MyUserProfilePagePromise;
-import ru.siobko.testing.core.users.user.UserProfilePagePromise;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
