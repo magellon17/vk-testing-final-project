@@ -8,11 +8,13 @@ import ru.siobko.testing.core.elements.myUserCard.MyUserCardToolBar;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.core.elements.sideNavigation.SideNavigationBlock;
 import ru.siobko.testing.core.friends.FriendsPagePromise;
+import ru.siobko.testing.core.hobbies.HobbiesPagePromise;
 import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.home.elements.avatar.PhotoPickerLayer;
 import ru.siobko.testing.core.home.elements.publish.PublishingMenuForm;
 import ru.siobko.testing.core.media.post.PostWrapper;
-import ru.siobko.testing.core.users.user.MyProfilePagePromise;
+import ru.siobko.testing.core.users.myUser.MyUserProfilePagePromise;
+import ru.siobko.testing.core.users.user.UserProfilePagePromise;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
@@ -27,7 +29,7 @@ public class HomePage implements UIComponent {
     private static final By FEED_POST = byClassName("feed-w");
     private static final By USER_CARD_TOOLBAR_DROPDOWN = byXpath(".//button[@aria-label='Настройки профиля']");
     private static final By HOBBIES_CONTAINER = byXpath(".//div[@data-l='t,hobbies.content']");
-    private static final By UPLOAD_AVATAR_BTN = byClassName("lcTc_avatar_lk");
+    private static final By UPLOAD_AVATAR_BTN = byText("Добавить фото");
     private static final By AVATAR_BLOCK = byId("hook_Block_Avatar");
     private static final By EXPAND_AVATAR_MENU = byId("viewImageLinkId");
     private static final By PUBLISH_BUTTON = byXpath(".//button[@data-testid='ddm-button']");
@@ -39,7 +41,7 @@ public class HomePage implements UIComponent {
 
     public HomePage() {
         check();
-        log.info("Перешли на главную страницу пользователя");
+        log.info("Загрузилась главная страница пользователя");
     }
 
     public void check() throws Error {
@@ -68,7 +70,7 @@ public class HomePage implements UIComponent {
     }
 
     public boolean isUploadAvatarButtonDisplayed() {
-        return $(UPLOAD_AVATAR_BTN).shouldBe(visible).isDisplayed();
+        return $(AVATAR_BLOCK).$(UPLOAD_AVATAR_BTN).isDisplayed();
     }
 
     public boolean isPublishedPostNotifyDisplayed() {
@@ -79,16 +81,22 @@ public class HomePage implements UIComponent {
         return $(FRIEND_REQUEST_NOTIFY).shouldBe(visible).isDisplayed();
     }
 
-    public MyProfilePagePromise goToProfilePage() {
+    public MyUserProfilePagePromise goToProfilePage() {
         log.info("Переходим на страницу профиля");
         sideNavigationBlock.clickOnMyProfile();
-        return new MyProfilePagePromise();
+        return new MyUserProfilePagePromise();
     }
 
     public FriendsPagePromise goToFriendsPage() {
         log.info("Переходим на страницу друзей");
         sideNavigationBlock.clickOnFriends();
         return new FriendsPagePromise();
+    }
+
+    public HobbiesPagePromise goToHobbiesPage() {
+        log.info("Переходим на страницу увлечений");
+        sideNavigationBlock.clickOnHobbies();
+        return new HobbiesPagePromise();
     }
 
     public PublishingMenuForm clickPublish() {
