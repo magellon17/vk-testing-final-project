@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-public class CommonUserProfilePage {
+public abstract class CommonUserProfilePage {
 
     private static final Logger log = LoggerFactory.getLogger(CommonUserProfilePage.class);
 
