@@ -21,7 +21,7 @@ public class UserProfilePage extends CommonUserProfilePage implements IUserProfi
 
     public UserProfilePage() {
         check();
-        log.info("Открылась страница профиля пользователя");
+        log.info("Загрузилась страница профиля пользователя");
     }
 
     @Override
@@ -40,7 +40,6 @@ public class UserProfilePage extends CommonUserProfilePage implements IUserProfi
 
     @Override
     public UserProfileMoreActionMenu expandMoreActionsMenu() {
-
         return new UserProfileMoreActionMenu();
     }
 }

@@ -37,7 +37,7 @@ public class SendFriendRequestFromMainSearchResultSteps {
         new GlobalSearchWrapper()
                 .getUserCardByName(username)
                 .clickOnCard()
-                .andWaitMyProfilePage();
+                .andWaitUserProfilePage();
     }
 
     public void sendFriendRequest() {
