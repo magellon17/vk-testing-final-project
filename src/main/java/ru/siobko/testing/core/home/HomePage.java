@@ -5,13 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
 import ru.siobko.testing.core.elements.myUserCard.MyUserCardToolBar;
-import ru.siobko.testing.core.elements.sideNavigation.promises.PagesNavigationPromise;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.core.elements.sideNavigation.SideNavigationBlock;
+import ru.siobko.testing.core.friends.FriendsPagePromise;
 import ru.siobko.testing.core.home.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.home.elements.avatar.PhotoPickerLayer;
 import ru.siobko.testing.core.home.elements.publish.PublishingMenuForm;
 import ru.siobko.testing.core.media.post.PostWrapper;
+import ru.siobko.testing.core.users.user.MyProfilePagePromise;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
@@ -78,16 +79,16 @@ public class HomePage implements UIComponent {
         return $(FRIEND_REQUEST_NOTIFY).shouldBe(visible).isDisplayed();
     }
 
-    public PagesNavigationPromise goToProfilePage() {
+    public MyProfilePagePromise goToProfilePage() {
         log.info("Переходим на страницу профиля");
         sideNavigationBlock.clickOnMyProfile();
-        return new PagesNavigationPromise();
+        return new MyProfilePagePromise();
     }
 
-    public PagesNavigationPromise goToFriendsPage() {
+    public FriendsPagePromise goToFriendsPage() {
         log.info("Переходим на страницу друзей");
         sideNavigationBlock.clickOnFriends();
-        return new PagesNavigationPromise();
+        return new FriendsPagePromise();
     }
 
     public PublishingMenuForm clickPublish() {

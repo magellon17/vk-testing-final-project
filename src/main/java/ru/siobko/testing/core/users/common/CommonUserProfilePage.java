@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.elements.sideNavigation.SideNavigationBlock;
-import ru.siobko.testing.core.elements.sideNavigation.promises.PagesNavigationPromise;
+import ru.siobko.testing.core.home.HomePagePromise;
 import ru.siobko.testing.core.media.photo.PhotoLayer;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -28,9 +28,9 @@ public abstract class CommonUserProfilePage {
         return new PhotoLayer();
     }
 
-    public PagesNavigationPromise openHomePage() {
+    public HomePagePromise openHomePage() {
         log.info("Переходим на главную страницу пользователя");
         sideNavigationBlock.clickOnHome();
-        return new PagesNavigationPromise();
+        return new HomePagePromise();
     }
 }
