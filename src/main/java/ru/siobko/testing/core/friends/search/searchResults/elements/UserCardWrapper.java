@@ -1,11 +1,11 @@
-package ru.siobko.testing.core.friends.search.elements;
+package ru.siobko.testing.core.friends.search.searchResults.elements;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.user.UserProfilePage;
-import ru.siobko.testing.core.user.elements.UserPreviewWindow;
+import ru.siobko.testing.core.users.user.UserProfilePage;
+import ru.siobko.testing.core.users.common.elements.UserPreviewWindow;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;

@@ -1,4 +1,4 @@
-package ru.siobko.testing.tests.friends;
+package ru.siobko.testing.tests.friendsRequests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.tests.RequiredLoginTest;
-import ru.siobko.testing.tests.friends.steps.SendFriendRequestFromMainSearchResultSteps;
+import ru.siobko.testing.tests.friendsRequests.steps.SendFriendRequestFromMainSearchResultSteps;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -24,7 +24,9 @@ public class CheckResultBannerDisplayingAfterSendingFriendRequestFromSearchResul
     @Tag("friends")
     public void testOnCheckingResultBannerAfterSendingFriendRequestFromSearchResult() {
         steps.sendFriendRequest();
-        assertTrue(new GlobalSearchWrapper().getUserCardByName(BOT2.login()).isSentFriendRequestBannerDisplayed(),
+        assertTrue(new GlobalSearchWrapper()
+                        .getUserCardByName(BOT2.login())
+                        .isSentFriendRequestBannerDisplayed(),
                 "Не отобразилась надпись 'Заявка отправлена' на карточке пользователя");
     }
 

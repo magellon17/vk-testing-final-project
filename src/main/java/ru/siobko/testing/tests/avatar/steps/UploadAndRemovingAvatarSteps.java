@@ -3,15 +3,24 @@ package ru.siobko.testing.tests.avatar.steps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.user.MyUserProfilePage;
+import ru.siobko.testing.core.users.myUser.MyUserProfilePage;
 
 public class UploadAndRemovingAvatarSteps {
 
     private static final Logger log = LoggerFactory.getLogger(UploadAndRemovingAvatarSteps.class);
 
     public void openHomePageFromProfilePage() {
-        log.info("Открываем страницу ленты пользователя");
-        new MyUserProfilePage().openHomePage();
+        log.info("Открываем главную страницу текущего пользователя");
+        new MyUserProfilePage()
+                .openHomePage()
+                .andWaitHomePage();
+    }
+
+    public void openProfilePageFromHomePage() {
+        log.info("Открываем страницу профиля текущего пользователя");
+        new HomePage()
+                .goToProfilePage()
+                .andWaitProfilePage();
     }
 
     public void setAvatar(String filename) {
@@ -32,8 +41,7 @@ public class UploadAndRemovingAvatarSteps {
 
     public void removeAvatarPhotoFromProfilePage() {
         log.info("Удаляем фотографию аватара с профиля");
-        new HomePage()
-                .openProfilePage()
+        new MyUserProfilePage()
                 .openLatestPhoto()
                 .expandActionsMenu()
                 .deletePhoto()

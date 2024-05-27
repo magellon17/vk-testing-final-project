@@ -1,12 +1,12 @@
-package ru.siobko.testing.tests.friends;
+package ru.siobko.testing.tests.friendsRequests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.siobko.testing.core.user.elements.UserPreviewWindow;
+import ru.siobko.testing.core.users.common.elements.UserPreviewWindow;
 import ru.siobko.testing.tests.RequiredLoginTest;
-import ru.siobko.testing.tests.friends.steps.SendFriendRequestFromFriendSearchResultsPageSteps;
+import ru.siobko.testing.tests.friendsRequests.steps.SendFriendRequestFromFriendSearchResultsPageSteps;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

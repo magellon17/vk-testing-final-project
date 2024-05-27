@@ -1,4 +1,4 @@
-package ru.siobko.testing.core.friends.elements;
+package ru.siobko.testing.core.friends.search.elements;
 
 import org.openqa.selenium.By;
 import org.slf4j.Logger;

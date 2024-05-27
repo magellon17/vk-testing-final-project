@@ -1,11 +1,11 @@
-package ru.siobko.testing.tests.friends.steps;
+package ru.siobko.testing.tests.friendsRequests.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.friends.FriendsMainPage;
-import ru.siobko.testing.core.friends.search.FriendsSearchResultsPage;
+import ru.siobko.testing.core.friends.search.searchResults.FriendsSearchResultsPage;
 import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.user.UserProfilePage;
+import ru.siobko.testing.core.users.user.UserProfilePage;
 
 public class SendFriendRequestFromFriendSearchResultsPageSteps {
 
@@ -29,7 +29,9 @@ public class SendFriendRequestFromFriendSearchResultsPageSteps {
 
     public void openFriendsMainPageFromHomePage() {
         log.info("Открываем страницу ленты пользователя");
-        new HomePage().openFriendsPage();
+        new HomePage()
+                .goToFriendsPage()
+                .andWaitFriendsPage();
     }
 
     public void enterTextInSearchFieldAndOpenSearchPage() {

@@ -1,4 +1,4 @@
-package ru.siobko.testing.core.user.elements;
+package ru.siobko.testing.core.users.common.elements;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
