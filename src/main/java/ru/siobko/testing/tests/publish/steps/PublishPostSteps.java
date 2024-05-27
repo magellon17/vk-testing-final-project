@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.home.HomePage;
 
 public class PublishPostSteps {
+
     private static final Logger log = LoggerFactory.getLogger(PublishPostSteps.class);
 
     private static final String POST_TEXT = RandomString.make(10);

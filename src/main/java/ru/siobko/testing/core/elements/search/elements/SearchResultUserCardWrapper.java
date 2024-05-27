@@ -4,13 +4,14 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.user.UserProfilePage;
+import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
+import ru.siobko.testing.core.users.user.UserProfilePage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 
-public class SearchResultUserCardWrapper {
+public class SearchResultUserCardWrapper extends GlobalSearchWrapper {
 
     private static final Logger log = LoggerFactory.getLogger(SearchResultUserCardWrapper.class);
 

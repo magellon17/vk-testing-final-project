@@ -33,7 +33,7 @@ public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends Re
 
     @AfterEach
     public void afterTest() {
+        steps.openProfilePageFromHomePage();
         steps.removeAvatarPhotoFromProfilePage();
-        steps.openHomePageFromProfilePage();
     }
 }

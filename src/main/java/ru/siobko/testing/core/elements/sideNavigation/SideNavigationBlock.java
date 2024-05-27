@@ -1,4 +1,4 @@
-package ru.siobko.testing.core.elements;
+package ru.siobko.testing.core.elements.sideNavigation;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;

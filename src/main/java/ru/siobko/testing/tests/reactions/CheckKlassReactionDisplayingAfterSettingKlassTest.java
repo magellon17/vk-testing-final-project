@@ -24,8 +24,7 @@ public class CheckKlassReactionDisplayingAfterSettingKlassTest extends RequiredL
     @Tag("reactions")
     public void testOnKlassReactionDisplayingAfterSettingKlassTest() {
         steps.setKlassToCreatedPost();
-        PostWrapper post = new HomePage()
-                .moveToCreatedPost();
+        PostWrapper post = new HomePage().moveToCreatedPost();
         assertTrue(post.isReactionSet(),
                 "Реакция на пост не отобразилась");
     }

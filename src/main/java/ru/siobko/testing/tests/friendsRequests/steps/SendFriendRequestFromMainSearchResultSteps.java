@@ -1,11 +1,10 @@
-package ru.siobko.testing.tests.friends.steps;
+package ru.siobko.testing.tests.friendsRequests.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
-import ru.siobko.testing.core.friends.search.FriendsSearchResultsPage;
 import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.user.UserProfilePage;
+import ru.siobko.testing.core.users.user.UserProfilePage;
 
 public class SendFriendRequestFromMainSearchResultSteps {
 
