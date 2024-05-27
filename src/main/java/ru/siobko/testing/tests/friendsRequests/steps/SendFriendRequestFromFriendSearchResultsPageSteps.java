@@ -17,16 +17,6 @@ public class SendFriendRequestFromFriendSearchResultsPageSteps {
         this.username = username;
     }
 
-    public void prepareTest() {
-        openFriendsMainPageFromHomePage();
-        enterTextInSearchFieldAndOpenSearchPage();
-    }
-
-    public void tearDown() {
-        openUserProfilePage();
-        cancelFriendRequestFromUserPage();
-    }
-
     public void openFriendsMainPageFromHomePage() {
         log.info("Открываем страницу ленты пользователя");
         new HomePage()

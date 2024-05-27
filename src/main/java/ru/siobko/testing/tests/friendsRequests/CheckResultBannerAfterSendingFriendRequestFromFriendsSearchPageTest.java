@@ -17,7 +17,8 @@ public class CheckResultBannerAfterSendingFriendRequestFromFriendsSearchPageTest
 
     @BeforeEach
     public void beforeTest() {
-        steps.prepareTest();
+        steps.openFriendsMainPageFromHomePage();
+        steps.enterTextInSearchFieldAndOpenSearchPage();
     }
 
     @Test
@@ -32,6 +33,7 @@ public class CheckResultBannerAfterSendingFriendRequestFromFriendsSearchPageTest
 
     @AfterEach
     public void afterTest() {
-        steps.tearDown();
+        steps.openUserProfilePage();
+        steps.cancelFriendRequestFromUserPage();
     }
 }
