@@ -18,6 +18,7 @@ public class GlobalSearchWrapper implements UIComponent {
     private final SelenideElement searchResults = $(byXpath(".//*[contains(@class,'dropdown-results')]"));
 
     private static final By FRIENDS_SEARCH_FIELD = byXpath(".//*[@placeholder='Искать на сайте']");
+    private static final By COLLAPSE_SEARCH = byXpath(".//*[@data-action='collapse']");
 
     public GlobalSearchWrapper() {
         check();
@@ -40,5 +41,11 @@ public class GlobalSearchWrapper implements UIComponent {
     public SearchResultUserCardWrapper getUserCardByName(String username) {
         SelenideElement userCard = searchResults.$(byXpath(".//*[contains(text(),'" + username + "')]/../../../../a"));
         return new SearchResultUserCardWrapper(userCard);
+    }
+
+    public void collapseSearch() {
+        $(COLLAPSE_SEARCH).shouldBe(
+                visible.because("Не отобразилась кнопка закрытия поисковика")
+        ).click();
     }
 }
