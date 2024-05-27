@@ -12,7 +12,7 @@ public abstract class UITest {
     protected static final String BROWSER = "chrome";
     protected static final String BASE_URL = "https://ok.ru";
 
-    protected static final TestBot BOT1 = new TestBot("technopol72", "technopolisPassword");
+    protected static final TestBot MAIN_BOT = new TestBot("technopol72", "technopolisPassword");
     protected static final TestBot BOT2 = new TestBot("technopol54", "technopolisPassword");
 
     @BeforeAll
