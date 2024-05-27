@@ -36,7 +36,8 @@ public class SendFriendRequestFromMainSearchResultSteps {
         log.info("Открываем главную страницу пользователя {}", username);
         new GlobalSearchWrapper()
                 .getUserCardByName(username)
-                .clickOnCard();
+                .clickOnCard()
+                .andWaitMyProfilePage();
     }
 
     public void sendFriendRequest() {

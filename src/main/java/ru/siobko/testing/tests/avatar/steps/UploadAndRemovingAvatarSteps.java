@@ -20,7 +20,7 @@ public class UploadAndRemovingAvatarSteps {
         log.info("Открываем страницу профиля текущего пользователя");
         new HomePage()
                 .goToProfilePage()
-                .andWaitProfilePage();
+                .andWaitMyProfilePage();
     }
 
     public void setAvatar(String filename) {
