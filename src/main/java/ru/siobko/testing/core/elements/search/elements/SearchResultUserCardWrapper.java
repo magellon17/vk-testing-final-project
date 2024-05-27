@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
-import ru.siobko.testing.core.users.user.UserProfilePage;
+import ru.siobko.testing.core.users.user.UserProfilePagePromise;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
@@ -32,12 +32,12 @@ public class SearchResultUserCardWrapper extends GlobalSearchWrapper {
         return this;
     }
 
-    public UserProfilePage clickOnCard() {
+    public UserProfilePagePromise clickOnCard() {
         log.info("Кликаем на карточку пользователя");
         card.shouldBe(
                 visible.because("Не нашлась карточка пользователя")
         ).click();
-        return new UserProfilePage();
+        return new UserProfilePagePromise();
     }
 
     public boolean isSentFriendRequestBannerDisplayed() {

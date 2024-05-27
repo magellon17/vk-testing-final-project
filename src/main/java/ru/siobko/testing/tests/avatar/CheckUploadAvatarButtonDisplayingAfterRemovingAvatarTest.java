@@ -15,7 +15,7 @@ public class CheckUploadAvatarButtonDisplayingAfterRemovingAvatarTest extends Re
 
     private final UploadAndRemovingAvatarSteps steps = new UploadAndRemovingAvatarSteps();
 
-    private static final String PHOTO = "src/main/java/ru/siobko/testing/tests/data/bestPhoto.jpg";
+    private static final String PHOTO = "src/main/java/ru/siobko/testing/tests/data/avatar.PNG";
 
     @BeforeEach
     public void beforeTest() {

@@ -23,7 +23,7 @@ public class LoginPage implements UIComponent {
 
     public LoginPage() {
         check();
-        log.info("Перешли на страницу входа");
+        log.info("Загрузилась страница входа");
     }
 
     @Override

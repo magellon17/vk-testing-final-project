@@ -21,6 +21,7 @@ public class SideNavigationBlock {
     private static final By MY_PROFILE_BTN = byXpath(".//a[@data-l='t,userPage']");
     private static final By HOME_BTN = byText("Лента");
     private static final By FRIENDS_BTN = byText("Друзья");
+    private static final By HOBBY_BTN = byText("Увлечения");
 
     public void clickOnHome() {
         log.info("Кликаем на кнопку 'Лента'");
@@ -40,6 +41,13 @@ public class SideNavigationBlock {
         log.info("Кликаем на кнопку 'Друзья'");
         block.$(FRIENDS_BTN).shouldBe(
                 visible.because("Нет кнопки для перехода на страницу друзей")
+        ).click();
+    }
+
+    public void clickOnHobbies() {
+        log.info("Кликаем на кнопку 'Увлечения'");
+        block.$(HOBBY_BTN).shouldBe(
+                visible.because("Нет кнопки для перехода на страницу увлечений")
         ).click();
     }
 }

@@ -19,19 +19,6 @@ public class SendingFriendRequestAndCheckNotifySteps {
         this.receiverBot = receiver;
     }
 
-    public void prepareTest() {
-        sendFriendRequestViaGlobalSearch();
-        logoutIntoLoginPage();
-        logInReceiverBot();
-    }
-
-    public void tearDown() {
-        logoutIntoLoginPage();
-        logInSenderBot();
-        openReceiverUserPageViaGlobalSearch();
-        cancelFriendRequestFromUserPage();
-    }
-
     public void sendFriendRequestViaGlobalSearch() {
         log.info("Отправляем запрос в друзья пользователю через поисковой результат");
         new HomePage()

@@ -17,7 +17,7 @@ public class CheckResultBannerDisplayingAfterSendingFriendRequestFromSearchResul
 
     @BeforeEach
     public void beforeTest() {
-        steps.prepareTest();
+        steps.enterTextInGlobalSearch();
     }
 
     @Test
@@ -32,6 +32,7 @@ public class CheckResultBannerDisplayingAfterSendingFriendRequestFromSearchResul
 
     @AfterEach
     public void afterTest() {
-        steps.tearDown();
+        steps.openUserProfilePage();
+        steps.cancelFriendRequestFromUserPage();
     }
 }

@@ -16,15 +16,6 @@ public class SendFriendRequestFromMainSearchResultSteps {
         this.username = username;
     }
 
-    public void prepareTest() {
-        enterTextInGlobalSearch();
-    }
-
-    public void tearDown() {
-        openUserProfilePage();
-        cancelFriendRequestFromUserPage();
-    }
-
     public void enterTextInGlobalSearch() {
         log.info("Вводим имя пользователя в поисковой строке");
         new HomePage()
@@ -36,7 +27,8 @@ public class SendFriendRequestFromMainSearchResultSteps {
         log.info("Открываем главную страницу пользователя {}", username);
         new GlobalSearchWrapper()
                 .getUserCardByName(username)
-                .clickOnCard();
+                .clickOnCard()
+                .andWaitUserProfilePage();
     }
 
     public void sendFriendRequest() {

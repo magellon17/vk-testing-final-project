@@ -18,7 +18,7 @@ public class FriendsMainPage implements UIComponent {
 
     public FriendsMainPage() {
         check();
-        log.info("Перешли на главную страницу друзей");
+        log.info("Загрузилась главная страница друзей");
     }
 
     @Override

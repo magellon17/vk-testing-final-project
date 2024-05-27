@@ -19,7 +19,7 @@ public class MyUserProfilePage extends CommonUserProfilePage implements IUserPro
 
     public MyUserProfilePage() {
         check();
-        log.info("Открылась страница профиля текущего пользователя");
+        log.info("Загрузилась страница профиля текущего пользователя");
     }
 
     @Override
