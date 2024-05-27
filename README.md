@@ -8,4 +8,5 @@
 * https://github.com/magellon17/vk-testing-final-project/issues/14 Тест на отображение соответсвующей надписи после нажатия кнопки "Добавить в друзья" на карточке пользователя в поисковом результате.
 * https://github.com/magellon17/vk-testing-final-project/issues/19 Тест на отображение уведомления об опубликованном увлечении после публикации увлечения.
 * https://github.com/magellon17/vk-testing-final-project/issues/15 Тест на отображение уведомления об опубликованном посте после публикации поста.
+* https://github.com/magellon17/vk-testing-final-project/issues/1 Тест на отображение уведомления о запросе в друзья после его получения.
   
