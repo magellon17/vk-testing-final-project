@@ -17,7 +17,9 @@ public class CheckNotifyDisplayingAfterSendingFriendRequestTest extends Required
 
     @BeforeEach
     public void beforeTest() {
-        steps.prepareTest();
+        steps.sendFriendRequestViaGlobalSearch();
+        steps.logoutIntoLoginPage();
+        steps.logInReceiverBot();
     }
 
     @Test
@@ -29,6 +31,9 @@ public class CheckNotifyDisplayingAfterSendingFriendRequestTest extends Required
 
     @AfterEach
     public void afterTest() {
-        steps.tearDown();
+        steps.logoutIntoLoginPage();
+        steps.logInSenderBot();
+        steps.openReceiverUserPageViaGlobalSearch();
+        steps.cancelFriendRequestFromUserPage();
     }
 }
