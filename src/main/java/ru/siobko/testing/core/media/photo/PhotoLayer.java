@@ -4,12 +4,15 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
-import ru.siobko.testing.core.media.photo.elements.PhotoLayerMoreActionsMenu;
+import ru.siobko.testing.core.media.photo.elements.MyPhotoMoreActionsMenu;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Фотолеер
+ */
 public class PhotoLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PhotoLayer.class);
@@ -30,12 +33,12 @@ public class PhotoLayer implements UIComponent {
         );
     }
 
-    public PhotoLayerMoreActionsMenu expandActionsMenu() {
+    public MyPhotoMoreActionsMenu expandActionsMenu() {
         log.info("Раскрываем меню дополнитльеных действий");
         $(EXPAND_MORE_ACTIONS_MENU).shouldBe(
                 visible.because("Не отобразились 3 точки меню дополнитлельных действий.")
         ).click();
-        return new PhotoLayerMoreActionsMenu();
+        return new MyPhotoMoreActionsMenu();
     }
 
     /**

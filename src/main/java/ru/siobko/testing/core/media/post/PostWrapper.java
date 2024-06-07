@@ -5,14 +5,14 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.media.elements.ShortcutReactionsMenu;
-import ru.siobko.testing.core.media.post.elements.PostActionsMenu;
+import ru.siobko.testing.core.media.post.elements.MyPostActionsMenu;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byXpath;
 
 /**
- * Обертка над постом
+ * Обертка над постом в ленте
  */
 public class PostWrapper {
 
@@ -46,10 +46,10 @@ public class PostWrapper {
         ).click();
     }
 
-    public PostActionsMenu expandActionsMenu() {
+    public MyPostActionsMenu expandActionsMenu() {
         post.$(EXPAND_ACTIONS_MENU).shouldBe(
                 visible.because("Не отобразились 3 точки поста")
         ).click();
-        return new PostActionsMenu();
+        return new MyPostActionsMenu();
     }
 }

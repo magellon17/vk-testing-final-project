@@ -12,6 +12,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Всплывающее уведомление об опубликованном посте об увлечении
+ */
 public class PostedHobbyNotify implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PostedHobbyNotify.class);

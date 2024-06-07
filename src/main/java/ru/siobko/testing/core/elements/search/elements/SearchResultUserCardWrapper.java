@@ -11,6 +11,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 
+/**
+ * Обертка над карточкой пользователя в списке текущих результатов поисковика по сайту
+ */
 public class SearchResultUserCardWrapper extends GlobalSearchWrapper {
 
     private static final Logger log = LoggerFactory.getLogger(SearchResultUserCardWrapper.class);

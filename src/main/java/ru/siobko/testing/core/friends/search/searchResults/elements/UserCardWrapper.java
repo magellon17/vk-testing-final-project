@@ -10,6 +10,9 @@ import ru.siobko.testing.core.users.common.elements.UserPreviewWindow;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 
+/**
+ * Обертка над карточкой пользователя на странице поисковой выдачи
+ */
 public class UserCardWrapper {
 
     private static final Logger log = LoggerFactory.getLogger(UserCardWrapper.class);

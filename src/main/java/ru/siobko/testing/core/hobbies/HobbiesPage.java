@@ -12,9 +12,12 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Главная страница увлечений текущего пользователя
+ */
 public class HobbiesPage implements UIComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(HomePage.class);
+    private static final Logger log = LoggerFactory.getLogger(HobbiesPage.class);
 
     private static final By HOBBY_POSTING_INPUT = byXpath(".//*[@data-l='t,feed.posting.ui.input']");
     private static final By POSTED_HOBBY_NOTIFY = byText("Ваша публикация отправлена на модерацию");

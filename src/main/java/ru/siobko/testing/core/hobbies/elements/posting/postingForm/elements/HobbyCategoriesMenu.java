@@ -13,6 +13,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Раскрывающийся список категорий хобби
+ */
 public class HobbyCategoriesMenu implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(HobbyCategoriesMenu.class);

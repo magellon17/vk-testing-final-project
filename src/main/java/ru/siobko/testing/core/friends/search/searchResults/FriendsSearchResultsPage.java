@@ -10,6 +10,9 @@ import ru.siobko.testing.core.friends.search.searchResults.elements.UserCardWrap
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Страница результатов поиска по друзьям
+ */
 public class FriendsSearchResultsPage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(FriendsSearchResultsPage.class);
