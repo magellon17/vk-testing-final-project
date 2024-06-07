@@ -4,12 +4,15 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
-import ru.siobko.testing.core.media.hobby.HobbyTopic;
+import ru.siobko.testing.core.media.hobby.HobbyPostWrapper;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Страница хобби постов в профиле текущего пользователя
+ */
 public class MyHobbiesPage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(MyHobbiesPage.class);
@@ -32,7 +35,7 @@ public class MyHobbiesPage implements UIComponent {
                 visible.because("Не отобразился блок с информацией об увлечениях"));
     }
 
-    public HobbyTopic getLastHobbyTopic() {
-        return new HobbyTopic($(LAST_HOBBY_TOPIC));
+    public HobbyPostWrapper getLastHobbyTopic() {
+        return new HobbyPostWrapper($(LAST_HOBBY_TOPIC));
     }
 }

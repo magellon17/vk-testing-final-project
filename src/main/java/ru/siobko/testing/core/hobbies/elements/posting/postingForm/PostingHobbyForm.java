@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
-import ru.siobko.testing.core.hobbies.elements.posting.postingForm.elements.HobbyCategoriesMenu;
 import ru.siobko.testing.core.hobbies.elements.politics.PostingHobbyPoliticsPromise;
+import ru.siobko.testing.core.hobbies.elements.posting.postingForm.elements.HobbyCategoriesMenu;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byClassName;

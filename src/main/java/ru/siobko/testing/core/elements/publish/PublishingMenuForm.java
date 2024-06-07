@@ -10,6 +10,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Форма с выбором типа контента для публикации
+ */
 public class PublishingMenuForm extends HomePage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PublishingMenuForm.class);

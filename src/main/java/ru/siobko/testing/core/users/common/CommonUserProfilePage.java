@@ -18,7 +18,6 @@ public abstract class CommonUserProfilePage {
     protected final SideNavigationBlock sideNavigationBlock = new SideNavigationBlock();
 
     protected static final By OPEN_LATEST_USER_PHOTO = byXpath(".//*[@data-l='targetPosition,0']");
-    protected static final By EXPAND_MORE_ACTIONS_MENU = byXpath(".//*[@aria-label='Ещё']");
 
     public PhotoLayer openLatestPhoto() {
         log.info("Открываем последнее фото профиля");

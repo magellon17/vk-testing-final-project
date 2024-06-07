@@ -3,16 +3,18 @@ package ru.siobko.testing.core.users.user;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.users.IUserProfilePage;
+import ru.siobko.testing.core.UIComponent;
 import ru.siobko.testing.core.users.common.CommonUserProfilePage;
-import ru.siobko.testing.core.users.myUser.elements.UserProfileMoreActionMenu;
 import ru.siobko.testing.core.users.user.elements.FriendRelationsSelector;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-public class UserProfilePage extends CommonUserProfilePage implements IUserProfilePage {
+/**
+ * Главная страница профиля пользователя
+ */
+public class UserProfilePage extends CommonUserProfilePage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(UserProfilePage.class);
 
@@ -36,10 +38,5 @@ public class UserProfilePage extends CommonUserProfilePage implements IUserProfi
                 visible.because("Не отобразилась серая кнопка с надписью 'Запрос отправлен'")
         ).click();
         return new FriendRelationsSelector();
-    }
-
-    @Override
-    public UserProfileMoreActionMenu expandMoreActionsMenu() {
-        return new UserProfileMoreActionMenu();
     }
 }

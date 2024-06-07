@@ -9,7 +9,6 @@ import ru.siobko.testing.tests.RequiredLoginTest;
 import ru.siobko.testing.tests.avatar.steps.UploadAndRemovingAvatarSteps;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CheckUploadAvatarButtonHidingAfterUploadingAvatarTest extends RequiredLoginTest {
 

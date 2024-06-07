@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
- * Раскрывающееся меню пользователя
+ * Раскрывающееся меню настроек пользователя в правом верхнем углу
  */
 public class MyUserCardToolBar implements UIComponent {
 

@@ -19,6 +19,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Главная страница пользователя
+ */
 public class HomePage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(HomePage.class);

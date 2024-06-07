@@ -10,6 +10,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Главная страница друзей текущего пользователя
+ */
 public class FriendsMainPage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(FriendsMainPage.class);

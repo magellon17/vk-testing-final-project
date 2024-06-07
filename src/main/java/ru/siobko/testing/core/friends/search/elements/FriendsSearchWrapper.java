@@ -9,6 +9,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Обертка над поисковиком по друзьям
+ */
 public class FriendsSearchWrapper implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(FriendsSearchWrapper.class);

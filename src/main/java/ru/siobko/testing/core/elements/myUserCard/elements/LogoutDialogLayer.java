@@ -9,6 +9,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Леер подтверждения выхода из аккаунта
+ */
 public class LogoutDialogLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(LogoutDialogLayer.class);

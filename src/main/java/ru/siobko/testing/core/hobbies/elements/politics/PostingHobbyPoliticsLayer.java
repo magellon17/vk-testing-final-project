@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
-import ru.siobko.testing.core.hobbies.HobbiesPage;
 import ru.siobko.testing.core.hobbies.elements.posting.notify.PostedHobbyNotifyPromise;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -13,6 +12,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Леер с политикой публикации поста об увлечении
+ */
 public class PostingHobbyPoliticsLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PostingHobbyPoliticsLayer.class);

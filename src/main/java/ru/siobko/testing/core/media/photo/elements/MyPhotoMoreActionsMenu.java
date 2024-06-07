@@ -10,13 +10,16 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-public class PhotoLayerMoreActionsMenu extends PhotoLayer implements UIComponent {
+/**
+ * Раскрывающееся меню дополнительных действий с собственным фото
+ */
+public class MyPhotoMoreActionsMenu extends PhotoLayer implements UIComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(PhotoLayerMoreActionsMenu.class);
+    private static final Logger log = LoggerFactory.getLogger(MyPhotoMoreActionsMenu.class);
 
     private static final By DELETE_PHOTO_BTN = byXpath(".//span[text()='Удалить фотографию']");
 
-    public PhotoLayerMoreActionsMenu() {
+    public MyPhotoMoreActionsMenu() {
         check();
         log.info("Открылось меню дополнительных действий с фотографией");
     }

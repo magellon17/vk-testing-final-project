@@ -13,6 +13,9 @@ import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byValue;
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Главная страница авторизации
+ */
 public class LoginPage implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(LoginPage.class);

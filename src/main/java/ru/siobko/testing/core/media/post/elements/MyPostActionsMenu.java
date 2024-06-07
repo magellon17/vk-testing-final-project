@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 /**
  * Контектсное меню собственного поста
  */
-public class PostActionsMenu {
+public class MyPostActionsMenu {
 
-    private static final Logger log = LoggerFactory.getLogger(PostActionsMenu.class);
+    private static final Logger log = LoggerFactory.getLogger(MyPostActionsMenu.class);
 
     private static final By DELETE_POST_BTN = byXpath(".//*[contains(@hrefattrs, 'StatusLayer_deleteButton')]");
 
