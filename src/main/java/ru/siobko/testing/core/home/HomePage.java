@@ -31,7 +31,7 @@ public class HomePage implements UIComponent {
     private static final By FEED_POST = byClassName("feed-w");
     private static final By USER_CARD_TOOLBAR_DROPDOWN = byXpath(".//button[@aria-label='Настройки профиля']");
     private static final By HOBBIES_CONTAINER = byXpath(".//div[@data-l='t,hobbies.content']");
-    private static final By UPLOAD_AVATAR_BTN = byText("Добавить фото");
+    private static final By UPLOAD_AVATAR_BTN = byXpath(".//*[@class='lcTc_avatar_lk']");
     private static final By AVATAR_BLOCK = byId("hook_Block_Avatar");
     private static final By EXPAND_AVATAR_MENU = byId("viewImageLinkId");
     private static final By PUBLISH_BUTTON = byXpath(".//button[@data-testid='ddm-button']");

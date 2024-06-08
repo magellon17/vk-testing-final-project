@@ -15,7 +15,7 @@ public class PhotoPickerLayer implements UIComponent {
 
     private static final Logger log = LoggerFactory.getLogger(PhotoPickerLayer.class);
 
-    private static final By UPLOAD_FROM_DEVICE_INPUT = byXpath(".//input[@accept='.jpg,.jpeg,.png,.gif,.heic,.mov,video/mp4,video/x-m4v,video/*']");
+    private static final By UPLOAD_FROM_DEVICE_INPUT = byXpath(".//input[contains(@class,'input-file-input')]");
     private static final By ENHANCE_PHOTO_BTN = byXpath(".//*[contains(@class,'enhance-photo-button')]");
 
     public PhotoPickerLayer() {
