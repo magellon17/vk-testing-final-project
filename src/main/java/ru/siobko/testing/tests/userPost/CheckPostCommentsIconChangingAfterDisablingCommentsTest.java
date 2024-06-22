@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.siobko.testing.core.home.HomePage;
 import ru.siobko.testing.tests.RequiredLoginTest;
-import ru.siobko.testing.tests.userPost.steps.CreatePostAndAddToBookmarkSteps;
+import ru.siobko.testing.tests.userPost.steps.CreatePostAndDisableCommentsSteps;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CheckPostCommentsIconChangingAfterDisablingCommentsTest extends RequiredLoginTest {
 
-    private final CreatePostAndAddToBookmarkSteps steps = new CreatePostAndAddToBookmarkSteps();
+    private final CreatePostAndDisableCommentsSteps steps = new CreatePostAndDisableCommentsSteps();
 
     @BeforeEach
     public void beforeTest() {
