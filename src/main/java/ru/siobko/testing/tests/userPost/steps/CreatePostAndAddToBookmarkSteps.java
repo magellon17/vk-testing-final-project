@@ -1,13 +1,13 @@
-package ru.siobko.testing.tests.publish.steps;
+package ru.siobko.testing.tests.userPost.steps;
 
 import net.bytebuddy.utility.RandomString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.home.HomePage;
 
-public class PublishPostSteps {
+public class CreatePostAndAddToBookmarkSteps {
 
-    private static final Logger log = LoggerFactory.getLogger(PublishPostSteps.class);
+    private static final Logger log = LoggerFactory.getLogger(CreatePostAndAddToBookmarkSteps.class);
 
     private static final String POST_TEXT = RandomString.make(10);
 
@@ -18,6 +18,14 @@ public class PublishPostSteps {
                 .clickOnPublishPost()
                 .enterPostText(POST_TEXT)
                 .clickSubmit();
+    }
+
+    public void disablePostComments() {
+        log.info("Сохраняем пост в закладки");
+        new HomePage()
+                .moveToCreatedPost()
+                .expandActionsMenu()
+                .clickOnDisablePostComments();
     }
 
     public void deleteCreatedPostFromHomePage() {
