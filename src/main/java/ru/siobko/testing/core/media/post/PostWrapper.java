@@ -23,6 +23,7 @@ public class PostWrapper {
     private static final By REACTIONS_BTN = byXpath(".//*[@aria-label='Поставить класс']");
     private static final By REMOVE_REACTION_BTN = byXpath(".//*[@aria-label='Снять класс']");
     private static final By EXPAND_ACTIONS_MENU = byClassName("feed-action");
+    private static final By COMMENTS_OFF_ICON = byXpath(".//*[contains(@class, 'ico_comment_off')]");
 
     public PostWrapper(SelenideElement postElement) {
         post = postElement;
@@ -38,6 +39,10 @@ public class PostWrapper {
 
     public boolean isReactionSet() {
         return post.$(REMOVE_REACTION_BTN).isDisplayed();
+    }
+
+    public boolean isCommentsOffSet() {
+        return post.$(COMMENTS_OFF_ICON).shouldBe(visible).isDisplayed();
     }
 
     public void setKlass() {

@@ -32,6 +32,6 @@ public class CheckPostReactionsSteps {
         new HomePage()
                 .moveToCreatedPost()
                 .expandActionsMenu()
-                .clickOnDelete();
+                .clickOnDeletePost();
     }
 }
