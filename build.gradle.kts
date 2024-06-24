@@ -13,7 +13,7 @@ dependencies {
     implementation(platform("org.junit:junit-bom:5.10.2"))
     implementation("org.junit.jupiter:junit-jupiter")
     runtimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation("com.codeborne:selenide:7.3.2")
+    implementation("com.codeborne:selenide:7.3.3")
     runtimeOnly("io.goodforgod:slf4j-simple-logger:2.0.0")
 }
 
