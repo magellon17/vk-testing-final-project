@@ -3,7 +3,7 @@ package ru.siobko.testing.tests.hobbies.steps;
 import com.codeborne.selenide.Selenide;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.hobbiesHomePage.HobbiesPage;
+import ru.siobko.testing.core.hobbiesHomePage.HobbiesHomePage;
 import ru.siobko.testing.core.hobbiesHomePage.elements.politics.PostingHobbyPoliticsLayer;
 import ru.siobko.testing.core.hobbiesHomePage.elements.posting.notify.PostedHobbyNotify;
 import ru.siobko.testing.core.homePage.HomePage;
@@ -16,7 +16,7 @@ public class CheckPostedHobbyNotifyDisplayingSteps {
 
     public void postHobby(Hobby hobby) {
         log.info("Публикуем увлечение");
-        PostingHobbyPoliticsLayer postingHobbyPoliticsLayer = new HobbiesPage()
+        PostingHobbyPoliticsLayer postingHobbyPoliticsLayer = new HobbiesHomePage()
                 .openPostingHobbyForm()
                 .enterText(hobby.text())
                 .expandHobbyCategoriesMenu()

@@ -7,9 +7,9 @@ import ru.siobko.testing.core.UIComponent;
 import ru.siobko.testing.core.elements.myUserCard.MyUserCardToolBar;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.core.elements.sideNavigation.SideNavigationBlock;
-import ru.siobko.testing.core.friendsHomePage.FriendsPagePromise;
-import ru.siobko.testing.core.groupsHomePage.GroupsMainPage;
-import ru.siobko.testing.core.hobbiesHomePage.HobbiesPagePromise;
+import ru.siobko.testing.core.friendsHomePage.FriendsHomePagePromise;
+import ru.siobko.testing.core.groupsHomePage.GroupsHomePage;
+import ru.siobko.testing.core.hobbiesHomePage.HobbiesHomePagePromise;
 import ru.siobko.testing.core.homePage.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.homePage.elements.avatar.PhotoPickerLayer;
 import ru.siobko.testing.core.elements.publish.PublishingMenuForm;
@@ -90,22 +90,22 @@ public class HomePage implements UIComponent {
         return new OwnUserProfilePagePromise();
     }
 
-    public FriendsPagePromise goToFriendsPage() {
+    public FriendsHomePagePromise goToFriendsPage() {
         log.info("Переходим на страницу друзей");
         sideNavigationBlock.clickOnFriends();
-        return new FriendsPagePromise();
+        return new FriendsHomePagePromise();
     }
 
-    public HobbiesPagePromise goToHobbiesPage() {
+    public HobbiesHomePagePromise goToHobbiesPage() {
         log.info("Переходим на страницу увлечений");
         sideNavigationBlock.clickOnHobbies();
-        return new HobbiesPagePromise();
+        return new HobbiesHomePagePromise();
     }
 
-    public GroupsMainPage goToGroupsPage() {
+    public GroupsHomePage goToGroupsPage() {
         log.info("Переходим на страницу с группами.");
         sideNavigationBlock.clickOnGroups();
-        return new GroupsMainPage();
+        return new GroupsHomePage();
     }
 
     public PublishingMenuForm clickPublish() {

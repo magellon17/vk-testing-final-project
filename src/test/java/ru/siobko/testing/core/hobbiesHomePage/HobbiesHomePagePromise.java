@@ -3,12 +3,12 @@ package ru.siobko.testing.core.hobbiesHomePage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class HobbiesPagePromise {
+public class HobbiesHomePagePromise {
 
-    private static final Logger log = LoggerFactory.getLogger(HobbiesPagePromise.class);
+    private static final Logger log = LoggerFactory.getLogger(HobbiesHomePagePromise.class);
 
-    public HobbiesPage andWaitHobbiesPage() {
+    public HobbiesHomePage andWaitHobbiesPage() {
         log.info("Ожидаем открытия главной страницы увлечений");
-        return new HobbiesPage();
+        return new HobbiesHomePage();
     }
 }

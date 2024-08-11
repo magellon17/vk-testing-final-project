@@ -13,13 +13,13 @@ import static com.codeborne.selenide.Selenide.$;
 /**
  * Главная страница друзей текущего пользователя
  */
-public class FriendsMainPage implements UIComponent {
+public class FriendsHomePage implements UIComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(FriendsMainPage.class);
+    private static final Logger log = LoggerFactory.getLogger(FriendsHomePage.class);
 
     private static final By FRIENDS_SEARCH_CONTAINER = byXpath(".//*[contains(@class, 'search-container')]");
 
-    public FriendsMainPage() {
+    public FriendsHomePage() {
         check();
         log.info("Загрузилась главная страница друзей");
     }
