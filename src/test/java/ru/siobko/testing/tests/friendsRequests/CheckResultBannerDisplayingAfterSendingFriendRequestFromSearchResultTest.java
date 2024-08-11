@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CheckResultBannerDisplayingAfterSendingFriendRequestFromSearchResultTest extends RequiredLoginTest {
 
     private final SendFriendRequestFromMainSearchResultSteps steps =
-            new SendFriendRequestFromMainSearchResultSteps(BOT2.login());
+            new SendFriendRequestFromMainSearchResultSteps(EXTRA_BOT.login());
 
     @BeforeEach
     public void beforeTest() {
@@ -25,7 +25,7 @@ public class CheckResultBannerDisplayingAfterSendingFriendRequestFromSearchResul
     public void testOnCheckingResultBannerAfterSendingFriendRequestFromSearchResult() {
         steps.sendFriendRequest();
         assertTrue(new GlobalSearchWrapper()
-                        .getUserCardByName(BOT2.login())
+                        .getUserCardByName(EXTRA_BOT.login())
                         .isSentFriendRequestBannerDisplayed(),
                 "Не отобразилась надпись 'Заявка отправлена' на карточке пользователя");
     }

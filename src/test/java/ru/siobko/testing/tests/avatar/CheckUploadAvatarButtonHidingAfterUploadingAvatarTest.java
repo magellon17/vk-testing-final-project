@@ -4,7 +4,7 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.siobko.testing.core.home.HomePage;
+import ru.siobko.testing.core.homePage.HomePage;
 import ru.siobko.testing.tests.RequiredLoginTest;
 import ru.siobko.testing.tests.avatar.steps.UploadAndRemovingAvatarSteps;
 

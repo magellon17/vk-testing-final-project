@@ -3,11 +3,11 @@ package ru.siobko.testing.tests.hobbies.steps;
 import com.codeborne.selenide.Selenide;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.hobbies.HobbiesPage;
-import ru.siobko.testing.core.hobbies.elements.politics.PostingHobbyPoliticsLayer;
-import ru.siobko.testing.core.hobbies.elements.posting.notify.PostedHobbyNotify;
-import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.users.myUser.hobbies.MyHobbiesPage;
+import ru.siobko.testing.core.hobbiesMainPage.HobbiesPage;
+import ru.siobko.testing.core.hobbiesMainPage.elements.politics.PostingHobbyPoliticsLayer;
+import ru.siobko.testing.core.hobbiesMainPage.elements.posting.notify.PostedHobbyNotify;
+import ru.siobko.testing.core.homePage.HomePage;
+import ru.siobko.testing.core.profilePage.ownProfile.hobbies.MyHobbiesPage;
 import ru.siobko.testing.models.hobby.Hobby;
 
 public class CheckPostedHobbyNotifyDisplayingSteps {

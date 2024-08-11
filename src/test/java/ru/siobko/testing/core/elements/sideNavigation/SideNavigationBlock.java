@@ -22,6 +22,7 @@ public class SideNavigationBlock {
     private static final By HOME_BTN = byText("Лента");
     private static final By FRIENDS_BTN = byText("Друзья");
     private static final By HOBBY_BTN = byText("Увлечения");
+    private static final By GROUPS_BUTTON = byText("Группы");
 
     public void clickOnHome() {
         log.info("Кликаем на кнопку 'Лента'");
@@ -48,6 +49,13 @@ public class SideNavigationBlock {
         log.info("Кликаем на кнопку 'Увлечения'");
         block.$(HOBBY_BTN).shouldBe(
                 visible.because("Нет кнопки для перехода на страницу увлечений")
+        ).click();
+    }
+
+    public void clickOnGroups() {
+        log.info("Кликаем на группы");
+        block.$(GROUPS_BUTTON).shouldBe(
+                visible.because("Нет кнопки для перехода к группам.")
         ).click();
     }
 }

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.siobko.testing.core.users.common.elements.UserPreviewWindow;
+import ru.siobko.testing.core.profilePage.common.elements.UserPreviewWindow;
 import ru.siobko.testing.tests.RequiredLoginTest;
 import ru.siobko.testing.tests.friendsRequests.steps.SendFriendRequestFromFriendSearchResultsPageSteps;
 
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CheckResultBannerDisplayingAfterSendingFriendRequestViaUserPreviewWindowTest extends RequiredLoginTest {
 
     private final SendFriendRequestFromFriendSearchResultsPageSteps steps =
-            new SendFriendRequestFromFriendSearchResultsPageSteps(BOT2.login());
+            new SendFriendRequestFromFriendSearchResultsPageSteps(EXTRA_BOT.login());
 
     @BeforeEach
     public void beforeTest() {

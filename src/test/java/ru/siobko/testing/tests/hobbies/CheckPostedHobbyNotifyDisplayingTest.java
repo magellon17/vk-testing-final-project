@@ -2,14 +2,13 @@ package ru.siobko.testing.tests.hobbies;
 
 import net.bytebuddy.utility.RandomString;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
-import ru.siobko.testing.core.hobbies.HobbiesPage;
+import ru.siobko.testing.core.hobbiesMainPage.HobbiesPage;
 import ru.siobko.testing.models.hobby.Hobby;
 import ru.siobko.testing.models.hobby.HobbyCategory;
 import ru.siobko.testing.tests.RequiredLoginTest;

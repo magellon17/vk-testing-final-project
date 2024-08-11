@@ -2,9 +2,9 @@ package ru.siobko.testing.tests.notification.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.login.LoginPage;
-import ru.siobko.testing.core.users.user.UserProfilePage;
+import ru.siobko.testing.core.homePage.HomePage;
+import ru.siobko.testing.core.loginPage.LoginPage;
+import ru.siobko.testing.core.profilePage.otherProfile.UserProfilePage;
 import ru.siobko.testing.models.TestBot;
 
 public class SendingFriendRequestAndCheckNotifySteps {
