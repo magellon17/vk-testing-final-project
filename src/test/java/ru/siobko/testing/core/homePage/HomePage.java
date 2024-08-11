@@ -7,14 +7,14 @@ import ru.siobko.testing.core.UIComponent;
 import ru.siobko.testing.core.elements.myUserCard.MyUserCardToolBar;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.core.elements.sideNavigation.SideNavigationBlock;
-import ru.siobko.testing.core.friendsMainPage.FriendsPagePromise;
-import ru.siobko.testing.core.groupsMainPage.GroupsMainPage;
-import ru.siobko.testing.core.hobbiesMainPage.HobbiesPagePromise;
+import ru.siobko.testing.core.friendsHomePage.FriendsPagePromise;
+import ru.siobko.testing.core.groupsHomePage.GroupsMainPage;
+import ru.siobko.testing.core.hobbiesHomePage.HobbiesPagePromise;
 import ru.siobko.testing.core.homePage.elements.avatar.AvatarShortcutMenu;
 import ru.siobko.testing.core.homePage.elements.avatar.PhotoPickerLayer;
 import ru.siobko.testing.core.elements.publish.PublishingMenuForm;
 import ru.siobko.testing.core.media.post.PostWrapper;
-import ru.siobko.testing.core.profilePage.ownProfile.MyUserProfilePagePromise;
+import ru.siobko.testing.core.userProfilePage.ownProfile.OwnUserProfilePagePromise;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
@@ -84,10 +84,10 @@ public class HomePage implements UIComponent {
         return $(FRIEND_REQUEST_NOTIFY).shouldBe(visible).isDisplayed();
     }
 
-    public MyUserProfilePagePromise goToProfilePage() {
+    public OwnUserProfilePagePromise goToProfilePage() {
         log.info("Переходим на страницу профиля");
         sideNavigationBlock.clickOnMyProfile();
-        return new MyUserProfilePagePromise();
+        return new OwnUserProfilePagePromise();
     }
 
     public FriendsPagePromise goToFriendsPage() {

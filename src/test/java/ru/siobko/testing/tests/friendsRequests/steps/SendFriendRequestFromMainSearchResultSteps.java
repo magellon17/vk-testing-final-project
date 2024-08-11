@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
 import ru.siobko.testing.core.homePage.HomePage;
-import ru.siobko.testing.core.profilePage.otherProfile.UserProfilePage;
+import ru.siobko.testing.core.userProfilePage.otherProfile.UserProfilePage;
 
 public class SendFriendRequestFromMainSearchResultSteps {
 

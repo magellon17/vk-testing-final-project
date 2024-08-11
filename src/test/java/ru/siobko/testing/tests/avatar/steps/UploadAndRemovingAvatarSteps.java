@@ -3,7 +3,7 @@ package ru.siobko.testing.tests.avatar.steps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.homePage.HomePage;
-import ru.siobko.testing.core.profilePage.ownProfile.MyUserProfilePage;
+import ru.siobko.testing.core.userProfilePage.ownProfile.OwnUserProfilePage;
 
 public class UploadAndRemovingAvatarSteps {
 
@@ -11,7 +11,7 @@ public class UploadAndRemovingAvatarSteps {
 
     public void openHomePageFromProfilePage() {
         log.info("Открываем главную страницу текущего пользователя");
-        new MyUserProfilePage()
+        new OwnUserProfilePage()
                 .openHomePage()
                 .andWaitHomePage();
     }
@@ -41,7 +41,7 @@ public class UploadAndRemovingAvatarSteps {
 
     public void removeAvatarPhotoFromProfilePage() {
         log.info("Удаляем фотографию аватара с профиля");
-        new MyUserProfilePage()
+        new OwnUserProfilePage()
                 .openLatestPhoto()
                 .expandActionsMenu()
                 .deletePhoto()
