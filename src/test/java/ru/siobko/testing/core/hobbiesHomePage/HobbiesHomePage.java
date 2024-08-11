@@ -14,14 +14,14 @@ import static com.codeborne.selenide.Selenide.$;
 /**
  * Главная страница увлечений текущего пользователя
  */
-public class HobbiesPage implements UIComponent {
+public class HobbiesHomePage implements UIComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(HobbiesPage.class);
+    private static final Logger log = LoggerFactory.getLogger(HobbiesHomePage.class);
 
     private static final By HOBBY_POSTING_INPUT = byXpath(".//*[@data-l='t,feed.posting.ui.input']");
     private static final By POSTED_HOBBY_NOTIFY = byText("Ваша публикация отправлена на модерацию");
 
-    public HobbiesPage(){
+    public HobbiesHomePage(){
         check();
         log.info("Загрузилась главная страница увлечений");
     }

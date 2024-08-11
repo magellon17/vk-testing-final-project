@@ -3,12 +3,12 @@ package ru.siobko.testing.core.friendsHomePage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class FriendsPagePromise {
+public class FriendsHomePagePromise {
 
-    private static final Logger log = LoggerFactory.getLogger(FriendsPagePromise.class);
+    private static final Logger log = LoggerFactory.getLogger(FriendsHomePagePromise.class);
 
-    public FriendsMainPage andWaitFriendsPage() {
+    public FriendsHomePage andWaitFriendsPage() {
         log.info("Ожидаем открытия страницы друзей текущего пользователя");
-        return new FriendsMainPage();
+        return new FriendsHomePage();
     }
 }

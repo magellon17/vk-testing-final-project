@@ -8,7 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
-import ru.siobko.testing.core.hobbiesHomePage.HobbiesPage;
+import ru.siobko.testing.core.hobbiesHomePage.HobbiesHomePage;
 import ru.siobko.testing.models.hobby.Hobby;
 import ru.siobko.testing.models.hobby.HobbyCategory;
 import ru.siobko.testing.tests.RequiredLoginTest;
@@ -34,7 +34,7 @@ public class CheckPostedHobbyNotifyDisplayingTest extends RequiredLoginTest {
     @ArgumentsSource(HobbiesParams.class)
     public void testGroupCreation(Hobby hobby) {
         steps.postHobby(hobby);
-        assertTrue(new HobbiesPage().isPublishedPostNotifyDisplayed(),
+        assertTrue(new HobbiesHomePage().isPublishedPostNotifyDisplayed(),
                 "Не отобразилось уведомление об опубликованном посте об увлечении");
     }
 
