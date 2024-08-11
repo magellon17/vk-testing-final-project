@@ -8,7 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
-import ru.siobko.testing.core.hobbiesMainPage.HobbiesPage;
+import ru.siobko.testing.core.hobbiesHomePage.HobbiesPage;
 import ru.siobko.testing.models.hobby.Hobby;
 import ru.siobko.testing.models.hobby.HobbyCategory;
 import ru.siobko.testing.tests.RequiredLoginTest;

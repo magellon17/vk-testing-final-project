@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
-import ru.siobko.testing.core.profilePage.otherProfile.UserProfilePagePromise;
+import ru.siobko.testing.core.userProfilePage.otherProfile.UserProfilePagePromise;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
