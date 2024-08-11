@@ -2,8 +2,8 @@ package ru.siobko.testing.tests.avatar.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.users.myUser.MyUserProfilePage;
+import ru.siobko.testing.core.homePage.HomePage;
+import ru.siobko.testing.core.profilePage.ownProfile.MyUserProfilePage;
 
 public class UploadAndRemovingAvatarSteps {
 

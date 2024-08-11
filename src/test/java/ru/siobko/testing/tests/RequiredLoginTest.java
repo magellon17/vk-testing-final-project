@@ -1,7 +1,7 @@
 package ru.siobko.testing.tests;
 
 import org.junit.jupiter.api.BeforeAll;
-import ru.siobko.testing.core.login.LoginPage;
+import ru.siobko.testing.core.loginPage.LoginPage;
 
 public abstract class RequiredLoginTest extends UITest {
     @BeforeAll

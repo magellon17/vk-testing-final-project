@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.UIComponent;
-import ru.siobko.testing.core.home.HomePage;
+import ru.siobko.testing.core.homePage.HomePage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;

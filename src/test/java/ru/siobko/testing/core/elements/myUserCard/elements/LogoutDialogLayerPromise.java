@@ -2,7 +2,7 @@ package ru.siobko.testing.core.elements.myUserCard.elements;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.login.LoginPage;
+import ru.siobko.testing.core.loginPage.LoginPage;
 
 public class LogoutDialogLayerPromise {
 

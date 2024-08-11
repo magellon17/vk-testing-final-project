@@ -3,7 +3,7 @@ package ru.siobko.testing.tests.publish.steps;
 import net.bytebuddy.utility.RandomString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.home.HomePage;
+import ru.siobko.testing.core.homePage.HomePage;
 
 public class PublishPostSteps {
 

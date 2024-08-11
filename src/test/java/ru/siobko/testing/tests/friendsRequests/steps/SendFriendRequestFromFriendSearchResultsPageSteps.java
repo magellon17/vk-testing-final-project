@@ -2,10 +2,10 @@ package ru.siobko.testing.tests.friendsRequests.steps;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.siobko.testing.core.friends.FriendsMainPage;
-import ru.siobko.testing.core.friends.search.searchResults.FriendsSearchResultsPage;
-import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.users.user.UserProfilePage;
+import ru.siobko.testing.core.friendsMainPage.FriendsMainPage;
+import ru.siobko.testing.core.friendsMainPage.search.searchResults.FriendsSearchResultsPage;
+import ru.siobko.testing.core.homePage.HomePage;
+import ru.siobko.testing.core.profilePage.otherProfile.UserProfilePage;
 
 public class SendFriendRequestFromFriendSearchResultsPageSteps {
 

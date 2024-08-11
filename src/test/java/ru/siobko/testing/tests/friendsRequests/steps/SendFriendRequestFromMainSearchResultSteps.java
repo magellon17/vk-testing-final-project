@@ -3,8 +3,8 @@ package ru.siobko.testing.tests.friendsRequests.steps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.siobko.testing.core.elements.search.GlobalSearchWrapper;
-import ru.siobko.testing.core.home.HomePage;
-import ru.siobko.testing.core.users.user.UserProfilePage;
+import ru.siobko.testing.core.homePage.HomePage;
+import ru.siobko.testing.core.profilePage.otherProfile.UserProfilePage;
 
 public class SendFriendRequestFromMainSearchResultSteps {
 
