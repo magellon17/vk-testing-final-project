@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(platform("org.junit:junit-bom:5.10.3"))
+    implementation(platform("org.junit:junit-bom:5.11.2"))
     implementation("org.junit.jupiter:junit-jupiter")
     runtimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("com.codeborne:selenide:7.4.1")
